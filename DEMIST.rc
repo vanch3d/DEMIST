@@ -1,0 +1,3967 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Design Environment for Multi-representational Instructional Simulation Technology\0"
+            VALUE "CompanyName", "CREDIT - University of Nottingham\0"
+            VALUE "FileDescription", "DEMIST\0"
+            VALUE "FileVersion", "1, 2, 0, 0\0"
+            VALUE "InternalName", "DEMIST\0"
+            VALUE "LegalCopyright", "Copyright © 2000-2005 / University of Nottingham\0"
+            VALUE "LegalTrademarks", "N. Van Labeke / S. Ainsworth\0"
+            VALUE "OriginalFilename", "demist.exe\0"
+            VALUE "PrivateBuild", "Beta Version\0"
+            VALUE "ProductName", "DEMIST\0"
+            VALUE "ProductVersion", "1, 2, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DEMIST"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DEMIST Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2000",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "CREDIT - University of Nottingham",IDC_STATIC,40,35,119,
+                    8
+END
+
+IDD_SIMULPARAM_FORM DIALOGEX 0, 0, 98, 154
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Custom2",IDC_EXPSET_PARAM,"MFCGridCtrl",WS_TABSTOP,0,12,
+                    96,64,0,HIDC_EXPSET_PARAM
+    CONTROL         "Custom2",IDC_EXPSET_INIT,"MFCGridCtrl",WS_TABSTOP,0,88,
+                    96,64,0,HIDC_EXPSET_INIT
+    CTEXT           "Parameters",IDC_STATIC_PARAM,0,0,96,12,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_TRANSPARENT
+    CTEXT           "Initial Values",IDC_STATIC_INIT,0,76,96,12,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_TRANSPARENT
+END
+
+IDD_SIMULTIMER_FORM DIALOG DISCARDABLE  0, 0, 224, 44
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Start",IDC_START,188,32,36,12,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "&Stop",IDC_STOP,4,4,36,12,NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "Slider1",IDC_TIMESLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_ENABLESELRANGE | WS_TABSTOP,4,4,216,
+                    36
+    CONTROL         "&B",IDC_BEGIN,"Button",BS_OWNERDRAW | BS_LEFT | BS_TOP | 
+                    NOT WS_VISIBLE | WS_DISABLED,4,32,12,12
+    CONTROL         "&R",IDC_RUN,"Button",BS_OWNERDRAW | BS_LEFT | BS_TOP | 
+                    NOT WS_VISIBLE | WS_DISABLED,16,20,12,12
+    CONTROL         "&E",IDC_END,"Button",BS_OWNERDRAW | BS_LEFT | BS_TOP | 
+                    NOT WS_VISIBLE | WS_DISABLED,28,32,12,12
+    CONTROL         "&P",IDC_PREV,"Button",BS_OWNERDRAW | BS_LEFT | BS_TOP | 
+                    NOT WS_VISIBLE | WS_DISABLED,4,20,12,12
+    CONTROL         "&N",IDC_NEXT,"Button",BS_OWNERDRAW | BS_LEFT | BS_TOP | 
+                    NOT WS_VISIBLE | WS_DISABLED,28,20,12,12
+END
+
+IDD_SELECTPARAM DIALOGEX 0, 0, 172, 125
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Select Outcomes..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LISTPARAM,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_AUTOARRANGE | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,8,20,156,60,
+                    WS_EX_CLIENTEDGE,HIDC_LISTPARAM
+    LTEXT           "",IDC_DESCRIPTION,8,80,156,20,0,WS_EX_STATICEDGE,
+                    HIDC_DESCRIPTION
+    CONTROL         "Tab1",IDC_TAB_EXPSET,"SysTabControl32",TCS_HOTTRACK | 
+                    TCS_TOOLTIPS | WS_TABSTOP,4,4,164,100,0,HIDC_TAB_EXPSET
+    DEFPUSHBUTTON   "OK",IDOK,4,108,52,14,0,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,60,108,52,14,0,0,HIDCANCEL
+    PUSHBUTTON      "&Help",IDHELP,116,108,52,14,0,0,HIDHELP
+END
+
+IDD_ANIMTEXT_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Text"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDITTEXT,4,4,204,72,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL,0,HIDC_EDITTEXT
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,84,196,1
+    LTEXT           "Alignment : ",IDC_STATIC,8,93,38,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_ALIGN,48,93,60,40,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_ALIGN
+    PUSHBUTTON      "Font",IDC_SETFONT,164,92,40,14,0,0,HIDC_SETFONT
+END
+
+IDD_ANIMOBJPOS_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Position"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Can be dragged at run time",IDC_STATIC,4,4,96,40,
+                    BS_FLAT
+    CONTROL         "&None",IDC_DRAG,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,12,16,33,10,0,HIDC_DRAG
+    CONTROL         "X axis",IDC_DRAG2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,56,16,35,10,0,HIDC_DRAG2
+    CONTROL         "XY axes",IDC_DRAG3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,12,28,42,10,0,HIDC_DRAG3
+    CONTROL         "Y axis",IDC_DRAG4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,56,28,35,10,0,HIDC_DRAG4
+    CONTROL         "&Linked to component :",IDC_ATTACHED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,108,12,84,8,0,HIDC_ATTACHED
+    GROUPBOX        "X-Y Position",IDC_STATIC,4,48,208,60,BS_FLAT
+    LTEXT           "&X = ",IDC_STATIC,16,61,14,8
+    EDITTEXT        IDC_XDEF,32,60,32,12,0,0,HIDC_XDEF
+    LTEXT           "+",IDC_STATIC,68,61,8,8
+    EDITTEXT        IDC_XSCALE,76,60,32,12,WS_DISABLED,0,HIDC_XSCALE
+    LTEXT           "X",IDC_STATIC,112,61,8,8
+    CONTROL         "",IDC_HORIZ,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,120,60,76,80,0,HIDC_HORIZ
+    LTEXT           "&Y = ",IDC_STATIC,16,77,14,8
+    EDITTEXT        IDC_YDEF,32,76,32,12,0,0,HIDC_YDEF
+    LTEXT           "+",IDC_STATIC,68,77,8,8
+    EDITTEXT        IDC_YSCALE,76,76,32,12,WS_DISABLED,0,HIDC_YSCALE
+    LTEXT           "X",IDC_STATIC,112,77,8,8
+    CONTROL         "",IDC_VERTIC,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,120,76,76,80,0,HIDC_VERTIC
+    COMBOBOX        IDC_COMPONENT,120,24,92,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_COMPONENT
+    CONTROL         "&Display positions trace",IDC_SHOWTRACE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,112,96,84,8,0,
+                    HIDC_SHOWTRACE
+    CONTROL         "Display &axes",IDC_SHOWAXIS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,96,56,8,0,HIDC_SHOWAXIS
+END
+
+IDD_ANIMPICT_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Picture"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "File :",IDC_STATIC,4,10,16,8
+    LTEXT           "< none >",IDC_BMPFILE,24,8,184,12,SS_CENTERIMAGE,
+                    WS_EX_CLIENTEDGE,HIDC_BMPFILE
+    PUSHBUTTON      "&Browse ...",IDC_BROWSE,156,24,50,14,0,0,HIDC_BROWSE
+    GROUPBOX        "Properties",IDC_STATIC,4,40,204,68,BS_FLAT
+    CONTROL         "&Transparent background :",IDC_BACKGROUND,"Button",
+                    BS_AUTOCHECKBOX | BS_VCENTER | WS_TABSTOP,12,52,96,12,0,
+                    HIDC_BACKGROUND
+    PUSHBUTTON      "",IDC_TRANSCOLOR,112,52,52,12,WS_DISABLED,0,
+                    HIDC_TRANSCOLOR
+END
+
+IDD_ANIMVALUE_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Value"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Display :",IDC_STATIC,4,24,88,40,BS_FLAT
+    CONTROL         "with value's &name",IDC_DISPLAY_NAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,37,72,10,0,
+                    HIDC_DISPLAY_NAME
+    CONTROL         "with value's &unit",IDC_DISPLAY_UNIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,48,66,10,0,
+                    HIDC_DISPLAY_UNIT
+    LTEXT           "&Precision :",IDC_STATIC,112,36,34,8
+    EDITTEXT        IDC_PRECISION,148,34,28,12,ES_AUTOHSCROLL,0,
+                    HIDC_PRECISION
+    CONTROL         "Spin1",IDC_SPINPREC,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,172,34,11,
+                    12
+    CONTROL         "&Value at the previous step",IDC_PREVTIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,112,48,98,10,0,
+                    HIDC_PREVTIME
+    LTEXT           "&Alignment : ",IDC_STATIC,12,88,38,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_ALIGN,52,88,60,40,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_ALIGN
+    PUSHBUTTON      "&Font",IDC_SETFONT,164,88,40,14,0,0,HIDC_SETFONT
+    CONTROL         "",IDC_DATALISTEX,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,44,4,96,104,0,
+                    HIDC_DATALISTEX
+    LTEXT           "&Outcome : ",IDC_STATIC,8,4,36,12,SS_CENTERIMAGE
+    GROUPBOX        "Value :",IDC_STATIC,96,24,116,40,BS_FLAT
+    GROUPBOX        "Text",IDC_STATIC,4,76,208,32,BS_FLAT
+END
+
+IDD_ANIMSHAPE_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Shape"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Basic s&hape :",IDC_STATIC,4,4,44,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_SHAPE,52,4,92,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_SHAPE
+    GROUPBOX        "Border",IDC_STATIC,4,20,208,44,BS_FLAT
+    LTEXT           "&Line Style :",IDC_STATIC,16,32,36,12,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_LSTYLE,56,32,52,12,0,0,HIDC_LSTYLE
+    LTEXT           "Line &Color :",IDC_STATIC,16,48,36,12,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_LCOLOR,56,48,52,12,0,0,HIDC_LCOLOR
+    LTEXT           "Line &Size :",IDC_STATIC,124,32,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_LSIZE,160,32,24,12,ES_AUTOHSCROLL,0,HIDC_LSIZE
+    CONTROL         "Spin1",IDC_SPIN_SIZE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,180,32,11,
+                    12
+    GROUPBOX        "Background",IDC_STATIC,4,68,208,40,BS_FLAT
+    LTEXT           "&Bk. Color :",IDC_STATIC,12,80,40,12,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_BCOLOR,56,80,52,12,0,0,HIDC_BCOLOR
+    COMBOBOX        IDC_LCOLOR_OBJ,124,48,76,80,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_LCOLOR_OBJ
+    COMBOBOX        IDC_BCOLOR_OBJ,124,80,76,80,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_BCOLOR_OBJ
+    CTEXT           "<=",IDC_STATIC,112,48,8,12,SS_CENTERIMAGE
+    CTEXT           "<=",IDC_STATIC,112,80,8,12,SS_CENTERIMAGE
+END
+
+IDD_DEFINE_EXPSET DIALOGEX 0, 0, 216, 137
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Experimental Set"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Name :",IDC_STATIC,8,8,24,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EXPSET_NAME,36,8,116,12,ES_AUTOHSCROLL,0,
+                    HIDC_EXPSET_NAME
+    CTEXT           "Initial Values / Parameters",IDC_STATIC,7,24,145,12,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_TRANSPARENT
+    CONTROL         "Custom2",IDC_EXPSET_PARAM,"MFCGridCtrl",WS_TABSTOP,8,36,
+                    144,96,0,HIDC_EXPSET_PARAM
+    DEFPUSHBUTTON   "OK",IDOK,164,8,44,14,0,0,HIDOK
+    PUSHBUTTON      "&Help",IDHELP,164,48,44,14,0,0,HIDHELP
+    PUSHBUTTON      "Cancel",IDCANCEL,164,28,44,14,0,0,HIDCANCEL
+    PUSHBUTTON      "&Default",IDC_EXPSET_DEFAULT,164,116,44,16,WS_DISABLED,
+                    0,HIDC_EXPSET_DEFAULT
+END
+
+IDD_DEFINE_MODEL DIALOGEX 0, 0, 296, 245
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Specification of Learning Unit"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_SIMULTYPE,IDC_MERICON,15,14,20,20,SS_REALSIZEIMAGE
+    RTEXT           "Initial &model :",IDC_STATIC,52,8,40,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_MODEL,96,8,192,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_MODEL
+    RTEXT           "&Name :",IDC_STATIC,68,24,24,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_LUNAME,96,24,192,12,ES_AUTOHSCROLL
+    GROUPBOX        "Timer definition",IDC_STATIC,4,48,136,32,BS_FLAT
+    LTEXT           "&Time :",IDC_STATIC,8,61,24,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_TIMER,32,61,36,12,ES_AUTOHSCROLL,0,HIDC_TIMER
+    CONTROL         "Spin1",IDC_TIMER_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,68,61,11,
+                    12
+    CONTROL         "Locked",IDC_TIMER_LOCK,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,80,61,40,12,0,HIDC_TIMER_LOCK
+    GROUPBOX        "Experimental sets",IDC_STATIC,144,48,148,100,BS_FLAT
+    LISTBOX         IDC_EXPSET,148,61,96,72,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP,0,HIDC_EXPSET
+    PUSHBUTTON      "&Define...",IDC_EXPSET_DEF,248,60,40,14,0,0,
+                    HIDC_EXPSET_DEF
+    PUSHBUTTON      "&Add ...",IDC_EXPSET_ADD,248,84,40,14,0,0,
+                    HIDC_EXPSET_ADD
+    PUSHBUTTON      "D&uplicate",IDC_EXPSET_DUP,248,100,40,14,WS_DISABLED,0,
+                    HIDC_EXPSET_DUP
+    PUSHBUTTON      "&Remove",IDC_EXPSET_DEL,248,116,40,14,0,0,
+                    HIDC_EXPSET_DEL
+    CONTROL         "&Locked",IDC_EXPSET_LOCK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,148,136,40,8,0,HIDC_EXPSET_LOCK
+    GROUPBOX        "Sequencing / Ordering",IDC_STATIC,4,85,136,31,BS_FLAT
+    LTEXT           "Number of &simulatenous ER :",IDC_STATIC,8,96,92,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_ORDER_ERNB,100,96,28,12,ES_AUTOHSCROLL,0,
+                    HIDC_ORDER_ERNB
+    CONTROL         "Spin1",IDC_ORDER_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,128,96,11,
+                    12
+    GROUPBOX        "Instructional activities",IDC_STATIC,4,152,288,68,
+                    BS_FLAT
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_ENABLESELRANGE | WS_TABSTOP,8,164,280,32,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "HTML D&escription :",IDC_STATIC,108,200,64,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_HTMLDOC,172,200,104,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,276,200,12,12
+    DEFPUSHBUTTON   "OK",IDOK,52,228,50,14,0,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,118,228,50,14,WS_DISABLED,0,HIDCANCEL
+    PUSHBUTTON      "&Help",IDHELP,184,228,52,14,0,0,HIDHELP
+    GROUPBOX        "External Representations",IDC_STATIC,4,120,136,28,
+                    BS_FLAT
+    CONTROL         "Use outcome's label as name",IDC_SHOWLABEL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,132,124,10
+    CONTROL         "&First run freely",IDC_BP_FIRST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,200,60,12,0,
+                    HIDC_BP_FIRST
+    GROUPBOX        "",IDC_STATIC,4,0,288,44,BS_FLAT
+END
+
+IDD_DEFINE_MER DIALOGEX 0, 0, 220, 178
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "Type of &E.R.  :",IDC_STATIC,8,4,56,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_EXTREP,68,4,92,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_EXTREP
+    RTEXT           "Simulation &Mode :",IDC_STATIC,8,20,56,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_RUNMODE,68,20,92,56,CBS_DROPDOWNLIST | WS_DISABLED | 
+                    WS_TABSTOP,0,HIDC_RUNMODE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,173,12,28,32
+    ICON            IDR_SIMULTEXT,IDC_MERICON,177,15,20,20,SS_REALSIZEIMAGE
+    GROUPBOX        "Display parameters",IDC_STATIC,8,56,100,60,BS_FLAT
+    PUSHBUTTON      "&Outcomes ...",IDC_OUTCOMES,20,72,76,16,WS_DISABLED,0,
+                    HIDC_OUTCOMES
+    PUSHBUTTON      "&Formats",IDC_FORMAT,20,92,76,16,WS_DISABLED,0,
+                    HIDC_FORMAT
+    GROUPBOX        "Action parameters",IDC_STATIC,112,56,100,60,BS_FLAT
+    CONTROL         "&Translation allowed",IDC_TRANS_MODE,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_DISABLED | 
+                    WS_TABSTOP,120,68,80,12
+    PUSHBUTTON      "&Interactions...",IDC_OPERATOR,124,92,76,16,WS_DISABLED,
+                    0,HIDC_OPERATOR
+    LTEXT           "&Description :",IDC_STATIC,8,120,40,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EXPSET_NAME,52,120,160,12,ES_AUTOHSCROLL,0,
+                    HIDC_EXPSET_NAME
+    CONTROL         "Open at &Startup",IDC_START_OPEN,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_MULTILINE | 
+                    WS_TABSTOP,144,136,68,12,0,HIDC_START_OPEN
+    DEFPUSHBUTTON   "OK",IDOK,16,156,50,14,0,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,82,156,50,14,0,0,HIDCANCEL
+    PUSHBUTTON      "&Help",IDHELP,148,156,52,14,0,0,HIDHELP
+    CONTROL         "Spin1",IDC_ICONSPIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_ALIGNLEFT | UDS_HORZ,173,36,28,8
+    RTEXT           "&Category :",IDC_STATIC,24,36,40,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_ER_CAT,68,37,92,79,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_ER_CAT
+END
+
+IDD_EDITINTERVAL DIALOGEX 0, 0, 190, 212
+STYLE DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Edit BreakPoint"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Nature",IDC_STATIC,4,4,180,44,BS_FLAT
+    CONTROL         "&Information",IDC_BP_STYLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,16,15,48,12,0,HIDC_BP_STYLE
+    CONTROL         "&Action",IDC_BP_STYLE3,"Button",BS_AUTORADIOBUTTON,116,
+                    15,36,12,0,HIDC_BP_STYLE3
+    CONTROL         "&Prediction",IDC_BP_STYLE2,"Button",BS_AUTORADIOBUTTON,
+                    16,31,48,12,0,HIDC_BP_STYLE2
+    CONTROL         "&Test",IDC_BP_STYLE4,"Button",BS_AUTORADIOBUTTON,116,31,
+                    36,12,0,HIDC_BP_STYLE4
+    CTEXT           "*",IDC_ICON1,71,15,12,12,SS_CENTERIMAGE
+    CTEXT           "*",IDC_ICON2,158,15,12,12,SS_CENTERIMAGE
+    CTEXT           "*",IDC_ICON3,71,31,12,12,SS_CENTERIMAGE
+    CTEXT           "*",IDC_ICON4,158,31,12,12,SS_CENTERIMAGE
+    LTEXT           "&Breakpoint :",IDC_STATIC,116,52,39,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_BP_VALUE,156,52,27,12,ES_AUTOHSCROLL | ES_NUMBER,0,
+                    HIDC_BP_VALUE
+    LTEXT           "&Description :",IDC_STATIC,4,52,39,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_BP_DESCR,4,68,180,68,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL,0,HIDC_BP_DESCR
+    LTEXT           "&Editable Outcome :",IDC_STATIC,4,164,64,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_OUTC_COMBO,68,164,116,80,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_DISABLED | WS_VSCROLL | WS_GROUP | 
+                    WS_TABSTOP,0,HIDC_OUTC_COMBO
+    DEFPUSHBUTTON   "OK",IDOK,8,188,40,16,0,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,76,188,40,16,0,0,HIDCANCEL
+    PUSHBUTTON      "&Help",IDHELP,140,188,40,16,0,0,HIDHELP
+    LTEXT           "HT&ML Description :",IDC_STATIC,4,144,61,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_BP_HTMLDOC,68,144,104,12,ES_AUTOHSCROLL,0,
+                    HIDC_BP_HTMLDOC
+    PUSHBUTTON      "...",IDC_BP_BROWSE,172,144,12,12,0,0,HIDC_BP_BROWSE
+END
+
+IDD_FORMAT_TABLE DIALOGEX 0, 0, 216, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Values definition",IDC_STATIC,4,24,208,52
+    LTEXT           "Timer range : from",IDC_STATIC,8,36,60,12,
+                    SS_CENTERIMAGE
+    LTEXT           "steps",IDC_STATIC,188,36,19,12,SS_CENTERIMAGE
+    GROUPBOX        "Colors",IDC_STATIC,4,88,208,64
+    EDITTEXT        IDC_FROM,72,36,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "to",IDC_STATIC,100,36,12,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_TO,112,36,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "every",IDC_STATIC,140,36,20,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_STEP,160,36,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Precision :",IDC_STATIC,8,56,34,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_PRECISION,44,56,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,68,56,11,
+                    12
+    PUSHBUTTON      "",IDC_MAXCOLOR,84,96,56,12,0,0,HIDC_MAXCOLOR
+    CONTROL         "Local Maximum",IDC_CHECKMAX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,96,68,12
+    PUSHBUTTON      "",IDC_MINCOLOR,84,112,56,12,0,0,HIDC_MINCOLOR
+    CONTROL         "Local Minimum",IDC_CHECKMIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,112,68,12
+    CONTROL         "Negative values",IDC_CHECKNEG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,136,68,12
+    PUSHBUTTON      "",IDC_NEGCOLOR,84,137,56,12,0,0,HIDC_NEGCOLOR
+END
+
+IDD_FORMAT_GRAPH DIALOG DISCARDABLE  0, 0, 216, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Graph Display ",IDC_STATIC,4,20,208,44
+    CONTROL         "&Legend",IDC_DISPLAY_LEG,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,12,32,52,12
+    CONTROL         "Axes && &Grid",IDC_DISPLAY_AXE,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,80,32,52,12
+    GROUPBOX        "Scale",IDC_STATIC,4,72,152,80
+    CONTROL         "&Autoscale",IDC_AUTOSCALE,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,12,104,52,12
+    LTEXT           "Time :",IDC_STATIC,24,120,20,12,SS_CENTERIMAGE
+    LTEXT           "from",IDC_STATIC,52,120,16,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_XMIN,72,120,32,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    LTEXT           "to",IDC_STATIC,108,120,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_XMAX,120,120,32,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    LTEXT           "Values :",IDC_STATIC,24,136,28,12,SS_CENTERIMAGE
+    LTEXT           "from",IDC_STATIC,52,136,16,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_YMIN,72,136,32,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "to",IDC_STATIC,108,136,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_YMAX,120,136,32,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "&Values on Current Time",IDC_DISPLAY_VALUES,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,48,88,12
+    CONTROL         "&ToolTips",IDC_DISPLAY_TIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,152,32,52,12
+    LTEXT           "&Type of scale :",IDC_STATIC,12,86,48,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_SCALE,64,84,80,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_ANIMDENSITY_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Density"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Add ...",IDC_POP_ADD,4,4,28,12,WS_DISABLED | WS_GROUP,
+                    0,HIDC_POP_ADD
+    PUSHBUTTON      "&Del...",IDC_POP_DEL,48,4,28,12,WS_DISABLED | WS_GROUP,
+                    0,HIDC_POP_DEL
+    CONTROL         "Tree1",IDC_PARAM_TREE,"SysTreeView32",
+                    TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | TVS_INFOTIP | 
+                    TVS_FULLROWSELECT | WS_GROUP | WS_TABSTOP,4,20,72,60,
+                    WS_EX_CLIENTEDGE,HIDC_PARAM_TREE
+    CONTROL         "Outco&me :",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,84,8,44,8
+    COMBOBOX        IDC_OUTC_COMBO,196,88,16,80,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | NOT WS_VISIBLE | WS_DISABLED | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP,0,HIDC_OUTC_COMBO
+    CONTROL         "1 item for &every  ",IDC_STATIC,"Static",
+                    SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,84,36,52,
+                    12
+    EDITTEXT        IDC_PRECISION,136,36,24,12,ES_AUTOHSCROLL | WS_GROUP,0,
+                    HIDC_PRECISION
+    CONTROL         "unit(s)",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,164,36,20,12
+    CONTROL         "&Default icon :",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,84,52,44,12
+    LTEXT           "C&olor :",IDC_STATIC,104,68,24,12,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_LCOLOR,136,68,68,12,WS_DISABLED | WS_GROUP,0,
+                    HIDC_LCOLOR
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,8,84,195,1
+    CONTROL         "&Show legend",IDC_SHOWLEGEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,8,88,56,10,0,HIDC_SHOWLEGEND
+    CONTROL         "&Name only",IDC_SHOWVALUES1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_GROUP,28,100,49,10,0,HIDC_SHOWVALUES1
+    CONTROL         "with &Values",IDC_SHOWVALUES2,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED,80,100,52,10,0,
+                    HIDC_SHOWVALUES2
+    CONTROL         "with &Count",IDC_SHOWVALUES3,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED,136,100,49,10,0,
+                    HIDC_SHOWVALUES3
+    CONTROL         "",IDC_DEFICON2,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,136,52,68,60,0,
+                    HIDC_DEFICON2
+    CONTROL         "",IDC_OUTC_COMBOEX,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,84,17,120,99,0,
+                    HIDC_OUTC_COMBOEX
+END
+
+IDD_FORMAT_TABLE2 DIALOGEX 0, 0, 156, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Interactions"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Value modification",IDC_STATIC,4,4,148,60
+    CONTROL         "&No modification allowed",IDC_EDIT_RD1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,8,16,91,10
+    CONTROL         "Edit &Parameters only",IDC_EDIT_RD2,"Button",
+                    BS_AUTORADIOBUTTON,8,32,80,10
+    CONTROL         "Edit Parameters && &Variables",IDC_EDIT_RD3,"Button",
+                    BS_AUTORADIOBUTTON,8,48,102,10
+    GROUPBOX        "Value selection",IDC_STATIC,4,68,148,84
+    CONTROL         "&Cell :",IDC_CHECKCELL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,80,40,12,0,HIDC_CHECKCELL
+    COMBOBOX        IDC_COMBO_CSEL,52,80,92,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_COMBO_CSEL
+    CONTROL         "&Line :",IDC_CHECKLINE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,96,40,12,0,HIDC_CHECKLINE
+    COMBOBOX        IDC_COMBO_LSEL,52,96,92,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_COMBO_LSEL
+    CONTROL         "Colu&mn:",IDC_CHECKCOL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,112,40,12,0,HIDC_CHECKCOL
+    COMBOBOX        IDC_COMBO_CLSEL,52,112,92,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_COMBO_CLSEL
+END
+
+IDD_FORMAT_ANIMATION DIALOGEX 0, 0, 216, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Animation :",IDC_STATIC,144,20,36,12,SS_CENTERIMAGE | 
+                    NOT WS_VISIBLE
+    COMBOBOX        IDC_ANIMATION,180,20,32,56,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,0,HIDC_ANIMATION
+    LTEXT           "&Components :",IDC_STATIC,8,8,44,8,SS_CENTERIMAGE
+    CONTROL         "Tree1",IDC_OBJECTTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_TRACKSELECT | TVS_INFOTIP | TVS_FULLROWSELECT | 
+                    WS_BORDER | WS_TABSTOP,8,20,124,112,WS_EX_STATICEDGE,
+                    HIDC_OBJECTTREE
+    CONTROL         "&Fit component(s) to view",IDC_FITTOVIEW,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,140,104,72,
+                    20
+    PUSHBUTTON      "Save as ...",IDC_SAVE,8,136,56,16
+    PUSHBUTTON      "Load ...",IDC_LOAD,76,136,56,16
+    CONTROL         "on the &right",IDC_RADIO_HYP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,148,56,56,8
+    CONTROL         "on the &bottom",IDC_RADIO_HYP2,"Button",
+                    BS_AUTORADIOBUTTON,148,69,56,8
+    GROUPBOX        "Display Hypothesis",IDC_STATIC,140,40,72,44
+END
+
+IDD_FORMAT_GRAPH2 DIALOG DISCARDABLE  0, 0, 216, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Translation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Graph Modifications",IDC_STATIC,4,4,148,52
+    CONTROL         "&Zoom available",IDC_DISPLAY_LEG,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,16,64,12
+    GROUPBOX        "Data Modifications",IDC_STATIC,4,60,148,52
+    CONTROL         "&Parameters change by dragging",IDC_DISPLAY_LEG2,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,72,116,12
+    CONTROL         "&Manual plot of new value",IDC_DISPLAY_LEG3,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,12,84,92,12
+END
+
+IDD_FORMAT_PARAMETER DIALOG DISCARDABLE  0, 0, 156, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&One Experimental Set at a time",IDC_EDIT_RD1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,8,16,113,10
+    CONTROL         "&Every Experimental Sets at a time",IDC_EDIT_RD2,"Button",
+                    BS_AUTORADIOBUTTON,8,32,121,10
+    GROUPBOX        "Display Mode",IDC_STATIC,4,4,148,44
+END
+
+IDD_IDENTITY DIALOGEX 0, 0, 172, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Identification"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,8,20,156,48,BS_FLAT
+    LTEXT           "&Name : ",IDC_STATIC,16,33,40,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_NAME,56,33,100,76,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_DISABLED | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Password : ",IDC_STATIC,16,49,40,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_PWD,56,49,100,12,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "&Authoring mode",IDC_MODE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,8,8,65,10
+    CONTROL         "&Learning Mode",IDC_MODE2,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT,96,8,64,10
+    PUSHBUTTON      "&H",IDC_TRICK,80,73,16,16,NOT WS_VISIBLE,
+                    WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "OK",IDOK,8,73,52,16,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,112,73,52,16
+END
+
+IDD_SIMULTABLE_FORM DIALOGEX 0, 0, 96, 64
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Custom",IDC_GRID,"MFCGridCtrl",WS_TABSTOP,0,0,96,64,0,
+                    HIDC_GRID
+END
+
+IDD_FORMAT_PHASEPLOT DIALOG DISCARDABLE  0, 0, 216, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Graph Display ",IDC_STATIC,4,24,208,56
+    CONTROL         "&Axes && Grid",IDC_DISPLAY_AXE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,36,52,12
+    CONTROL         "&Legend",IDC_DISPLAY_LEG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,84,36,52,12
+    CONTROL         "&ToolTips",IDC_DISPLAY_TIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,148,36,52,12
+    CONTROL         "&Current Time",IDC_DISPLAY_CURRTIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,60,56,12
+    CONTROL         "&Stability point",IDC_DISPLAY_STABPT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,84,60,56,12
+    CONTROL         "&Isoclines",IDC_DISPLAY_ISOCLINE,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,148,60,56,12
+    GROUPBOX        "Scale",IDC_STATIC,4,84,208,68
+    LTEXT           "&Type of scale :",IDC_STATIC,12,92,48,11,SS_CENTERIMAGE
+    COMBOBOX        IDC_SCALE,64,92,80,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "&Autoscale",IDC_AUTOSCALE,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,12,108,52,12
+    LTEXT           "X :",IDC_STATIC,16,120,20,12,SS_CENTERIMAGE
+    LTEXT           "from",IDC_STATIC,44,120,16,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_XMIN,64,120,32,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    LTEXT           "to",IDC_STATIC,100,120,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_XMAX,112,120,32,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    LTEXT           "Y :",IDC_STATIC,16,136,28,12,SS_CENTERIMAGE
+    LTEXT           "from",IDC_STATIC,44,136,16,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_YMIN,64,136,32,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "to",IDC_STATIC,100,136,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SCALE_YMAX,112,136,32,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+END
+
+IDD_ANIMOBJSIZE_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Dimension"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,4,4,208,48,BS_FLAT
+    GROUPBOX        "",IDC_STATIC,4,56,208,32,BS_FLAT
+    CONTROL         "&Dimension",IDC_DIM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,4,4,49,10,0,HIDC_DIM
+    CONTROL         "A&rea",IDC_DIM2,"Button",BS_AUTORADIOBUTTON,4,56,31,10,
+                    0,HIDC_DIM2
+    CONTROL         "&Fit to screen",IDC_DIM3,"Button",BS_AUTORADIOBUTTON,4,
+                    92,55,10,0,HIDC_DIM3
+    LTEXT           "&W = ",IDC_STATIC,20,16,14,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_WDEF,36,16,24,12,WS_DISABLED,0,HIDC_WDEF
+    LTEXT           "+",IDC_STATIC,64,16,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_WSCALE,72,16,28,12,WS_DISABLED,0,HIDC_WSCALE
+    LTEXT           "X",IDC_STATIC,104,16,8,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_CBWIDTH,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,112,16,76,80,0,
+                    HIDC_CBWIDTH
+    LTEXT           "&H = ",IDC_STATIC,20,34,13,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_HDEF,36,32,24,12,WS_DISABLED,0,HIDC_HDEF
+    LTEXT           "+",IDC_STATIC,64,32,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HSCALE,72,32,28,12,WS_DISABLED,0,HIDC_HSCALE
+    LTEXT           "X",IDC_STATIC,104,32,8,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_CBHEIGHT,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,112,32,76,80,0,
+                    HIDC_CBHEIGHT
+    LTEXT           "&S = ",IDC_STATIC,20,68,14,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_ADEF,36,68,24,12,WS_DISABLED,0,HIDC_ADEF
+    LTEXT           "+",IDC_STATIC,64,68,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_ASCALE,72,68,28,12,WS_DISABLED,0,HIDC_ASCALE
+    LTEXT           "X",IDC_STATIC,104,68,8,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_CBAREA,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,112,68,76,80,0,HIDC_CBAREA
+END
+
+IDD_ANIMLINK_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Connector"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Linked to :",IDC_STATIC,4,0,208,52,BS_FLAT
+    LTEXT           "&From :",IDC_STATIC,12,16,20,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_START,32,16,76,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_START
+    LTEXT           "Attach point :",IDC_STATIC,112,16,44,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_START_PT,160,16,48,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_START_PT
+    LTEXT           "&To :",IDC_STATIC,12,32,20,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_END,32,32,76,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_END
+    LTEXT           "Attach point :",IDC_STATIC,112,32,44,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_END_PT,160,32,48,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_END_PT
+    GROUPBOX        "Arrows style :",IDC_STATIC,4,56,88,52,BS_FLAT
+    CONTROL         "&Begin arrow",IDC_ARROW_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,68,72,10,0,HIDC_ARROW_START
+    CONTROL         "&End arrow",IDC_ARROW_END,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,80,72,10,0,HIDC_ARROW_END
+    CONTROL         "&Straight connector",IDC_CONNECTOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,100,60,74,10,0,
+                    HIDC_CONNECTOR
+    CONTROL         "E&lbow connector",IDC_CONNECTOR2,"Button",
+                    BS_AUTORADIOBUTTON,100,72,69,10,0,HIDC_CONNECTOR2
+    CONTROL         "&Curved connector",IDC_CONNECTOR3,"Button",
+                    BS_AUTORADIOBUTTON,100,84,73,10,0,HIDC_CONNECTOR3
+    CONTROL         "S&pring connector",IDC_CONNECTOR4,"Button",
+                    BS_AUTORADIOBUTTON,100,96,70,10,0,HIDC_CONNECTOR4
+END
+
+IDD_ANIMSECTOR_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Sector"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Properties",IDC_STATIC,4,4,156,28,BS_FLAT
+    CONTROL         "&Locked",IDC_LOCKED,"Button",BS_AUTOCHECKBOX | 
+                    BS_VCENTER | WS_TABSTOP,12,16,40,12,0,HIDC_LOCKED
+    PUSHBUTTON      "&Font ...",IDC_SETFONT,168,12,40,14,0,0,HIDC_SETFONT
+    GROUPBOX        "Title :",IDC_STATIC,4,36,208,72,BS_FLAT
+    CONTROL         "&Text :",IDC_TITLE_TEXT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,12,48,36,12,0,HIDC_TITLE_TEXT
+    CONTROL         "&Value :",IDC_TITLE_VALUE,"Button",BS_AUTORADIOBUTTON,
+                    12,64,36,12,0,HIDC_TITLE_VALUE
+    EDITTEXT        IDC_EDITTEXT,48,48,160,12,ES_AUTOHSCROLL,0,HIDC_EDITTEXT
+    LISTBOX         IDC_DATALIST,48,64,84,40,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_DATALIST
+    CONTROL         "with value's &unit",IDC_DISPLAY_UNIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,136,64,66,10,0,
+                    HIDC_DISPLAY_UNIT
+    LTEXT           "&Precision :",IDC_MYSTATIC,136,78,34,8
+    EDITTEXT        IDC_PRECISION,172,76,28,12,ES_AUTOHSCROLL,0,
+                    HIDC_PRECISION
+    CONTROL         "Spin1",IDC_SPINPREC,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,196,76,11,
+                    12
+    CONTROL         "&At previous step",IDC_PREVTIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,136,92,67,10,0,
+                    HIDC_PREVTIME
+END
+
+IDD_DEFINEOUTCOME_DLG DIALOGEX 0, 0, 244, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Outcomes Specification"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "&Synchronise Exp. Set definition",IDC_SYNCDEF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,4,113,10
+    CONTROL         "Custom",IDC_GRID,"MFCGridCtrl",WS_TABSTOP,4,16,176,180,
+                    0,HIDC_GRID
+    PUSHBUTTON      "&Restore All",IDC_DEFAULT_RESTORE,188,148,50,14
+    CONTROL         "Set &As Default",IDC_DEFAULT_OUTCOMES,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,196,168,40,
+                    16
+    DEFPUSHBUTTON   "OK",IDOK,188,16,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,188,33,50,14
+    PUSHBUTTON      "&Help",IDHELP,188,52,50,14
+END
+
+IDD_ANIMPICTDENS_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Caterpillar"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Information: ",IDC_STATIC,8,8,40,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_DATA,48,8,76,80,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_DATA
+    GROUPBOX        "Value",IDC_STATIC,4,24,96,48,BS_FLAT
+    CONTROL         "Lo&garithmic scale",IDC_LOG,"Button",BS_AUTOCHECKBOX | 
+                    BS_VCENTER | WS_TABSTOP,16,36,76,12,0,HIDC_LOG
+    LTEXT           "1 &picture for ",IDC_STATIC,16,52,44,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_DELTA,60,52,32,12,0,0,HIDC_DELTA
+    GROUPBOX        "Offset",IDC_STATIC,124,24,88,48,BS_FLAT
+    LTEXT           "d&X = ",IDC_STATIC,136,36,16,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_XDEF,156,36,40,12,0,0,HIDC_XDEF
+    LTEXT           "d&Y = ",IDC_STATIC,136,52,16,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_YDEF,156,52,40,12,0,0,HIDC_YDEF
+    LTEXT           "Alignment :",IDC_STATIC,4,76,36,12,SS_CENTERIMAGE
+    CONTROL         "&Left to Right",IDC_ALIGN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_GROUP,48,76,52,12
+    CONTROL         "&Right to Left",IDC_ALIGN2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,108,76,52,12
+    CONTROL         "Display &values",IDC_SHOWVALUE,"Button",BS_AUTOCHECKBOX | 
+                    BS_VCENTER | WS_DISABLED | WS_TABSTOP,4,92,76,12,0,
+                    HIDC_SHOWVALUE
+END
+
+IDD_ER_TRANSLATION DIALOGEX 0, 0, 220, 157
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Translation"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Contingent Translation Level",IDC_STATIC,4,4,212,148,
+                    BS_FLAT
+    CONTROL         "&Independent",IDC_TRANSLATION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,8,24,64,10,0,
+                    HIDC_TRANSLATION
+    CONTROL         "Map &Fact",IDC_TRANSLATION2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_TABSTOP,8,48,64,10
+    CONTROL         "Map &Relation",IDC_TRANSLATION3,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,8,72,64,10,0,
+                    HIDC_TRANSLATION3
+    CONTROL         "&Support Action",IDC_TRANSLATION4,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_TABSTOP,8,96,64,10
+    CONTROL         "&Dyna-Linked",IDC_TRANSLATION5,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,8,120,64,10,0,
+                    HIDC_TRANSLATION5
+    LTEXT           "No translation supported: this ER is independent from the other ones.",
+                    IDC_STATIC,80,24,132,20
+    LTEXT           "Learner work on both ERs but support is given for relating them.",
+                    IDC_STATIC,80,48,132,20,WS_DISABLED
+    LTEXT           "Map equivalent entities in ERs.",IDC_STATIC,80,72,132,
+                    20
+    LTEXT           "Work on a familiar ER, feedback provided  in the less familiar ERs.",
+                    IDC_STATIC,80,96,132,20,WS_DISABLED
+    LTEXT           "Full translation support",IDC_STATIC,80,120,132,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,72,20,1,124
+END
+
+IDD_PREF_CAT_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Log File"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Folder:",IDC_STATIC,4,8,24,12,SS_CENTERIMAGE
+    LTEXT           "< none >",IDC_FOLDER,28,8,172,12,SS_CENTERIMAGE,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "...",IDC_BROWSE,200,8,14,12,0,0,HIDC_BROWSE
+    GROUPBOX        "ER Categories",IDC_STATIC,4,24,128,88
+    PUSHBUTTON      "&Add",IDC_ADD,104,36,24,12,0,0,HIDC_ADD
+    PUSHBUTTON      "&Del",IDC_DEL,104,52,24,12,0,0,HIDC_DEL
+    LISTBOX         IDC_CATLIST,12,52,88,56,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CATEGORY,12,36,88,12,ES_AUTOHSCROLL
+END
+
+IDD_PREF_CONFIG_PAGE DIALOG DISCARDABLE  0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "View Managment",IDC_STATIC,4,4,72,51
+    CONTROL         "&Open E.R.",IDC_TOPEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,16,56,10
+    CONTROL         "&Close E.R.",IDC_TCLOSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,28,56,10
+    CONTROL         "&Activate E.R.",IDC_TSWITCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,40,56,10
+    GROUPBOX        "Simulation",IDC_STATIC,4,60,71,51
+    CONTROL         "&Run",IDC_TRUN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    72,56,10
+    CONTROL         "&Pause",IDC_TPAUSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,84,56,10
+    CONTROL         "Re&view",IDC_TREVIEW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,96,56,10
+END
+
+IDD_VIEW_CONTROLLER DIALOGEX 0, 0, 240, 164
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Sto&p",IDC_STOP,12,9,40,16,BS_RIGHT
+    PUSHBUTTON      "&P",IDC_RUN,92,24,12,12,BS_LEFT | BS_TOP | NOT 
+                    WS_VISIBLE | WS_DISABLED | NOT WS_TABSTOP
+    PUSHBUTTON      "&<",IDC_BEGIN,68,24,12,12,BS_LEFT | BS_TOP | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "&>",IDC_END,116,24,12,12,BS_LEFT | BS_TOP | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "Initialis&e",IDC_RESTART,188,4,48,16,BS_RIGHT
+    GROUPBOX        "Task",IDC_STATIC,136,0,44,40,BS_FLAT
+    PUSHBUTTON      "&Read it",IDC_TASK,140,11,36,24,BS_BOTTOM | 
+                    BS_MULTILINE
+    CONTROL         "&X",IDC_EXPAND,"Button",BS_OWNERDRAW | BS_LEFT | BS_TOP,
+                    4,32,12,12
+    GROUPBOX        "",IDC_STATIC,4,44,208,116,BS_FLAT
+    GROUPBOX        "Run",IDC_STATIC,4,0,56,28,BS_FLAT
+    PUSHBUTTON      "&Start",IDC_START,12,9,40,16,BS_RIGHT
+    CTEXT           "Parameters / Initial Values",IDC_STATIC_PARAM,8,48,200,
+                    12,0,WS_EX_DLGMODALFRAME | WS_EX_TRANSPARENT
+    CONTROL         "Custom2",IDC_EXPSET_PARAM,"MFCGridCtrl",WS_TABSTOP,8,60,
+                    200,80,0,HIDC_EXPSET_PARAM
+    PUSHBUTTON      "Apply",IDC_APPLY,8,142,36,16
+    PUSHBUTTON      "Reset",IDC_RESET,48,142,36,16
+    PUSHBUTTON      "Add",IDC_ADD,156,142,24,16,NOT WS_VISIBLE
+    PUSHBUTTON      "Del.",IDC_DELETE,184,142,24,16,NOT WS_VISIBLE
+    GROUPBOX        "Review",IDC_STATIC,64,0,68,40,BS_FLAT
+    PUSHBUTTON      "&A",IDC_PREVSTEP,68,12,12,12,BS_LEFT | BS_TOP | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "&C",IDC_NEXTSTEP,116,12,12,12,BS_LEFT | BS_TOP | NOT 
+                    WS_TABSTOP
+    CONTROL         "&F",IDC_NEXT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,104,12,12,12
+    CONTROL         "&B",IDC_PREV,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,80,12,12,12
+    PUSHBUTTON      "&Next Unit",IDC_NEXTUNIT,188,24,48,16,BS_RIGHT
+    PUSHBUTTON      "BP",IDC_NEWBP_A,216,48,20,14,BS_CENTER | BS_BOTTOM,0,
+                    HIDC_NEWBP_A
+    PUSHBUTTON      "BP",IDC_NEWBP_H,216,64,20,14,BS_CENTER | BS_BOTTOM,0,
+                    HIDC_NEWBP_H
+END
+
+IDD_DEFINE_OUTCOME_DLG DIALOGEX 0, 0, 216, 197
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Outcomes Specification"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Phase Plot",IDC_STATIC,4,4,116,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,12,16,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_X_OUTCOME,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,16,76,80,0,
+                    HIDC_X_OUTCOME
+    LTEXT           "&Y axis : ",IDC_STATIC,12,32,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_Y_OUTCOME,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,32,76,80,0,
+                    HIDC_Y_OUTCOME
+    GROUPBOX        "Stability Point",IDC_STATIC,4,52,116,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,12,64,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_X_STAB,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,40,64,76,80,0,HIDC_X_STAB
+    LTEXT           "&Y axis : ",IDC_STATIC,12,80,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_Y_STAB,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,40,80,76,80,0,HIDC_Y_STAB
+    GROUPBOX        "",IDC_STATIC,4,100,116,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,12,112,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_X_ISO1,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,40,112,76,80,0,HIDC_X_ISO1
+    LTEXT           "&Y axis : ",IDC_STATIC,12,128,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_Y_ISO1,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,40,128,76,80,0,HIDC_Y_ISO1
+    GROUPBOX        "",IDC_STATIC,4,148,116,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,12,160,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_X_ISO2,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,40,161,76,80,0,HIDC_X_ISO2
+    LTEXT           "&Y axis : ",IDC_STATIC,12,176,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_Y_ISO2,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,40,177,76,80,0,HIDC_Y_ISO2
+    CONTROL         "Custom",IDC_GRID,"MFCGridCtrl",WS_TABSTOP,128,16,80,84,
+                    0,HIDC_GRID
+    DEFPUSHBUTTON   "OK",IDOK,144,116,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,144,50,14
+    PUSHBUTTON      "&Help",IDHELP,144,172,50,14
+    GROUPBOX        "&Experimental Sets",IDC_STATIC,124,4,88,100,BS_FLAT
+    CONTROL         "Isocline Species &1",IDC_ISO1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,100,73,10
+    CONTROL         "Isocline Species &2",IDC_ISO2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,148,73,10
+END
+
+IDD_FORMAT_CHART DIALOG DISCARDABLE  0, 0, 216, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_FORMAT_TEXT DIALOGEX 0, 0, 216, 157
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Level of Information",IDC_STATIC,4,20,148,48
+    CONTROL         "Display &Abstract Model(s)",IDC_LEVEL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,12,28,132,12,
+                    0,HIDC_LEVEL
+    CONTROL         "Display Partial &Mathematical Model(s)",IDC_LEVEL2,
+                    "Button",BS_AUTORADIOBUTTON,12,41,132,12,0,HIDC_LEVEL2
+    CONTROL         "Display &Full Mathematical Model(s)",IDC_LEVEL3,"Button",
+                    BS_AUTORADIOBUTTON,12,52,132,12,0,HIDC_LEVEL3
+    GROUPBOX        "Colors",IDC_STATIC,4,72,208,48
+    RTEXT           "&Parameters : ",IDC_STATIC,8,84,44,12,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_PARAMCOLOR,52,84,52,12,0,0,HIDC_PARAMCOLOR
+    RTEXT           "&Variables : ",IDC_STATIC,108,84,48,12,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_VARCOLOR,156,84,52,12,0,0,HIDC_VARCOLOR
+    RTEXT           "&Constants : ",IDC_STATIC,8,100,44,12,SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_CSTCOLOR,52,100,52,12,0,0,HIDC_CSTCOLOR
+    GROUPBOX        "Font",IDC_STATIC,4,120,208,32
+    PUSHBUTTON      "C&hange ...",IDC_SETFONT,12,132,48,16,0,0,HIDC_SETFONT
+    CTEXT           "MS Sans Serif",IDC_SAMPLE,64,132,80,16,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+END
+
+IDD_ER_FORMAT DIALOGEX 0, 0, 216, 157
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Formats"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Static",IDC_OPTIONSTREE_OPTIONS,20,16,156,100,NOT 
+                    WS_VISIBLE | WS_DISABLED,0,HIDC_OPTIONSTREE_OPTIONS
+END
+
+IDD_WELCOMEBAR DIALOG DISCARDABLE  0, 0, 272, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Start Scenario",ID_WELCOME_START,4,3,104,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "&Next Unit",ID_WELCOME_NEXT,172,3,52,14,BS_RIGHT | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "&Start Unit",ID_WELCOME_CURRENT,116,3,52,14,BS_RIGHT | 
+                    NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,112,3,1,
+                    14
+END
+
+IDD_EDIT_VALUE DIALOG DISCARDABLE  0, 0, 140, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit value"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,8,40,36,14
+    PUSHBUTTON      "Cancel",IDCANCEL,52,40,36,14
+    LTEXT           "New value :",IDC_NAME,8,12,48,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_VALUE,60,20,72,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Help",IDHELP,96,40,36,14
+    LTEXT           "Old Value",IDC_OLDVALUE,60,4,72,12,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+END
+
+IDD_MODEL_MODEL DIALOGEX 0, 0, 92, 40
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_CHILD
+EXSTYLE WS_EX_CONTEXTHELP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_MODEL_LIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,0,24,88,16
+    PUSHBUTTON      "&Add...",IDC_MODEL_ADD,4,4,40,16
+    PUSHBUTTON      "&Del...",IDC_MODEL_DEL,48,4,40,16
+END
+
+IDD_MODEL_ADD DIALOGEX 0, 0, 189, 159
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Add a new model..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_ADD_LIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | WS_BORDER | 
+                    WS_TABSTOP,8,20,172,108,0,HIDC_ADD_LIST
+    CONTROL         "Tab1",IDC_ADD_TAB,"SysTabControl32",TCS_TOOLTIPS | 
+                    WS_TABSTOP,4,4,180,128,0,HIDC_ADD_TAB
+    DEFPUSHBUTTON   "OK",IDOK,8,136,48,14,0,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,72,136,48,14,0,0,HIDCANCEL
+    PUSHBUTTON      "Help",IDHELP,136,136,48,14,0,0,HIDHELP
+    LTEXT           "Static dsf dsf dsf dsf sdf dsf dsf sdf sdfsfd sfsd fs fs dfs dfsd fsdf sdf sdf sdf s",
+                    IDC_ADD_DESC,100,148,20,8,NOT WS_VISIBLE
+END
+
+IDD_PREF_SIMUL_PAGE DIALOGEX 0, 0, 216, 114
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Simulation"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Simulation Speeds",IDC_STATIC,4,4,100,48
+    LTEXT           "&Authoring :",IDC_STATIC,16,16,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SIM_SPEED_AUTH,56,16,40,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Learning :",IDC_STATIC,16,32,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SIM_SPEED_LEARN,56,32,40,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    GROUPBOX        "Background Colours",IDC_STATIC,4,56,100,48
+    PUSHBUTTON      "",IDC_SIM_PASTCLR,44,68,56,12,0,0,HIDC_SIM_PASTCLR
+    PUSHBUTTON      "",IDC_SIM_FUTURECLR,44,84,56,12,0,0,HIDC_SIM_FUTURECLR
+    LTEXT           "&Past :",IDC_STATIC,12,68,32,12,SS_CENTERIMAGE
+    LTEXT           "&Future :",IDC_STATIC,12,84,32,12,SS_CENTERIMAGE
+END
+
+IDD_ANIMATION_SELECT DIALOGEX 0, 0, 224, 126
+STYLE DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_CONTEXTHELP
+CAPTION "Components"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_OBJ_LIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_EDITLABELS | WS_BORDER | 
+                    WS_GROUP | WS_TABSTOP,4,20,216,104,0,HIDC_OBJ_LIST
+    CONTROL         "&Icon",IDC_VIEW_ICON,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,4,4,16,12,0,
+                    HIDC_VIEW_ICON
+    CONTROL         "&List",IDC_VIEW_LIST,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_FLAT | WS_TABSTOP,20,4,16,12,0,
+                    HIDC_VIEW_LIST
+    PUSHBUTTON      "&Open",IDC_VIEW_LOAD,48,4,16,12,BS_FLAT,0,
+                    HIDC_VIEW_LOAD
+    PUSHBUTTON      "&Save",IDC_VIEW_SAVE,64,4,16,12,BS_FLAT,0,
+                    HIDC_VIEW_SAVE
+END
+
+IDD_SORTERDLG_DIALOG DIALOGEX 0, 0, 148, 145
+STYLE DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "ERs Sorting"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_MER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    LVS_NOCOLUMNHEADER | WS_TABSTOP,24,1,124,132,
+                    WS_EX_CLIENTEDGE,HIDC_MER_LIST
+    PUSHBUTTON      "&Up",IDC_MER_UP,2,1,20,28,BS_FLAT,0,HIDC_MER_UP
+    PUSHBUTTON      "&Down",IDC_MER_DOWN,2,33,20,28,BS_FLAT,0,HIDC_MER_DOWN
+    CONTROL         "&Force the ERs as a sequence",IDC_MER_SEQUENCE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_DISABLED | WS_TABSTOP,
+                    36,136,109,8,0,HIDC_MER_SEQUENCE
+END
+
+IDD_BPMESSAGE_DLG DIALOGEX 0, 0, 227, 92
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         540,IDC_STATIC,"Static",SS_BITMAP,0,0,227,25
+    CONTROL         "",IDC_BP_TITLE,"RICHEDIT",ES_CENTER | ES_MULTILINE | 
+                    ES_READONLY | WS_DISABLED | WS_TABSTOP,4,6,152,12
+    LTEXT           "Static",IDC_BP_NAME,4,76,176,12,SS_CENTERIMAGE | NOT 
+                    WS_VISIBLE | WS_DISABLED,WS_EX_TRANSPARENT
+    LTEXT           "DEMIST",IDC_STATIC,4,68,28,8,WS_DISABLED,
+                    WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "OK",IDOK,172,76,52,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,36,73,187,1
+    CONTROL         541,IDC_BP_ICON,"Static",SS_BITMAP,8,33,27,28,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_BP_DESC,"RICHEDIT",ES_MULTILINE | ES_READONLY | 
+                    WS_DISABLED | WS_TABSTOP,40,28,180,40
+END
+
+IDD_MODEL_BUILD DIALOGEX 0, 0, 180, 140
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_CHILD
+EXSTYLE WS_EX_CONTEXTHELP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Validate",IDC_BMODEL_VAL,4,4,52,16
+    CONTROL         "",IDC_BMODEL_EQS,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,4,24,
+                    176,112
+    PUSHBUTTON      "&Properties",IDC_BMODEL_PROP,76,4,52,16,NOT WS_VISIBLE | 
+                    WS_DISABLED
+END
+
+IDD_MODEL_BUILDPROP DIALOGEX 0, 0, 188, 69
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Simulation Properties"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Integration Step (h) :",IDC_STATIC,12,36,64,12,
+                    SS_CENTERIMAGE
+    GROUPBOX        "Numerical Approximation",IDC_STATIC,4,4,116,52,BS_FLAT
+    COMBOBOX        IDD_MODEL_BUILDPROP_NUM,12,20,100,30,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,0,
+                    HIDD_MODEL_BUILDPROP_NUM
+    EDITTEXT        IDD_MODEL_BUILDPROP_H,80,36,28,12,ES_AUTOHSCROLL,0,
+                    HIDD_MODEL_BUILDPROP_H
+    DEFPUSHBUTTON   "OK",IDOK,132,8,48,14,0,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,132,28,48,14,0,0,HIDCANCEL
+    PUSHBUTTON      "Help",IDHELP,132,48,48,14,0,0,HIDHELP
+END
+
+IDD_LU_MODELPAGE DIALOGEX 0, 0, 268, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Simulation"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,4,0,260,44,BS_FLAT
+    ICON            IDR_SIMULTYPE,IDC_MERICON,8,12,20,20,SS_REALSIZEIMAGE
+    RTEXT           "Initial &model :",IDC_STATIC,44,8,40,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_SIM_MODEL,88,8,168,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_SIM_MODEL
+    RTEXT           "&Name :",IDC_STATIC,44,24,24,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SIM_LUNAME,88,24,168,12,ES_AUTOHSCROLL,0,
+                    HIDC_SIM_LUNAME
+    GROUPBOX        "Numerical Approximation",IDC_STATIC,4,48,160,64,BS_FLAT
+    RTEXT           "Method :",IDC_STATIC,12,60,28,12,SS_CENTERIMAGE
+    COMBOBOX        IDD_SIM_METHOD,44,60,112,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDD_SIM_METHOD
+    RTEXT           "Integration Step (h) :",IDC_STATIC,28,76,64,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDD_SIM_H,96,76,28,12,ES_AUTOHSCROLL,0,HIDD_SIM_H
+    RTEXT           "Sample :",IDC_STATIC,28,92,64,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SIM_TIMER,96,92,36,12,ES_AUTOHSCROLL,0,
+                    HIDC_SIM_TIMER
+    CONTROL         "Spin1",IDC_SIM_TIMERSPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,132,92,11,12,0,HIDC_SIM_TIMERSPIN
+    GROUPBOX        "Time Range",IDC_STATIC,168,48,92,64,BS_FLAT
+    EDITTEXT        IDD_SIM_RANGE_X,228,64,28,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED,0,HIDD_SIM_RANGE_X
+    EDITTEXT        IDD_SIM_RANGE_Y,228,96,28,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED,0,HIDD_SIM_RANGE_Y
+    RTEXT           "Initial :",IDC_STATIC,184,64,40,12,SS_CENTERIMAGE
+    RTEXT           "Final :",IDC_STATIC,184,96,40,12,SS_CENTERIMAGE
+    EDITTEXT        IDD_SIM_RANGE_D,228,80,28,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED,0,HIDD_SIM_RANGE_D
+    RTEXT           "Increment :",IDC_STATIC,184,80,40,12,SS_CENTERIMAGE
+END
+
+IDD_LU_EXPSETPAGE DIALOGEX 0, 0, 268, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Exp. Sets"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_EXPSET,8,8,104,84,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP,0,HIDC_EXPSET
+    PUSHBUTTON      "&Edit...",IDC_EXPSET_DEF,116,8,40,14,0,0,
+                    HIDC_EXPSET_DEF
+    PUSHBUTTON      "&Add ...",IDC_EXPSET_ADD,116,44,40,14,0,0,
+                    HIDC_EXPSET_ADD
+    PUSHBUTTON      "C&opy...",IDC_EXPSET_DUP,116,80,40,14,WS_DISABLED,0,
+                    HIDC_EXPSET_DUP
+    PUSHBUTTON      "&Del...",IDC_EXPSET_DEL,116,60,40,14,0,0,
+                    HIDC_EXPSET_DEL
+    CONTROL         "&Locked",IDC_EXPSET_LOCK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,96,40,8,0,HIDC_EXPSET_LOCK
+    GROUPBOX        "",IDC_STATIC,4,0,156,112,BS_FLAT
+END
+
+IDD_LU_INSTRUCTPAGE DIALOGEX 0, 0, 268, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Activities"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Instructional activities",IDC_STATIC,4,4,260,80,BS_FLAT
+    CONTROL         "Slider1",IDC_INSTR_SLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_ENABLESELRANGE | WS_TABSTOP,8,17,252,
+                    32,WS_EX_DLGMODALFRAME,HIDC_INSTR_SLIDER
+    CONTROL         "&First run freely",IDC_INSTR_FIRST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,52,60,12,0,
+                    HIDC_INSTR_FIRST
+    LTEXT           "HTML D&escription :",IDC_STATIC,76,92,64,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_INSTR_HTMLDOC,140,92,108,12,ES_AUTOHSCROLL,0,
+                    HIDC_INSTR_HTMLDOC
+    PUSHBUTTON      "...",IDC_INSTR_BROWSE,248,92,12,12,0,0,
+                    HIDC_INSTR_BROWSE
+    CONTROL         "&Actions available at learner's request",
+                    IDC_INSTR_ACTIONS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    12,68,128,12,0,HIDC_INSTR_ACTIONS
+END
+
+IDD_LU_MERPAGE DIALOGEX 0, 0, 268, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "MERs"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Sequencing / Ordering",IDC_STATIC,4,4,148,104,BS_FLAT
+    GROUPBOX        "External Representations",IDC_STATIC,156,4,108,104,
+                    BS_FLAT
+    LTEXT           "Number of &simulatenous ER :",IDC_STATIC,12,16,92,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_MERS_ORDER,104,16,28,12,ES_AUTOHSCROLL,0,
+                    HIDC_MERS_ORDER
+    CONTROL         "Spin1",IDC_MERS_ORDERSPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,132,16,11,12,0,HIDC_MERS_ORDERSPIN
+    CONTROL         "Use outcome's label as name",IDC_MERS_SHOWLABEL,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,168,16,80,16,
+                    0,HIDC_MERS_SHOWLABEL
+    CONTROL         "Use &copresent ERs",IDC_MERS_MULTIPANE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,32,80,12,0,
+                    HIDC_MERS_MULTIPANE
+END
+
+IDD_ER_OUTCOME DIALOGEX 0, 0, 216, 157
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Outcomes"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Custom",IDC_ER_GRID,"MFCGridCtrl",WS_TABSTOP,4,16,208,
+                    120,0,HIDC_ER_GRID
+    CONTROL         "&Synchronise Exp. Set definition",IDC_ER_SYNCDEF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,4,113,10,0,
+                    HIDC_ER_SYNCDEF
+    PUSHBUTTON      "&Restore All",IDC_ER_RESTORE,164,140,50,12,0,0,
+                    HIDC_ER_RESTORE
+    CONTROL         "Set &As Default",IDC_ER_DEFAULT,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,4,140,60,12,
+                    0,HIDC_ER_DEFAULT
+END
+
+IDD_ER_EXTREP DIALOGEX 0, 0, 216, 157
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Ext. Rep."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "Type of &E.R.  :",IDC_STATIC,8,12,56,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_ER_EXTREP,68,12,92,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Simulation &Mode :",IDC_STATIC,8,28,56,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_ER_RUNMODE,68,28,92,56,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    173,20,28,32
+    ICON            IDR_SIMULTEXT,IDC_ER_ICON,177,23,20,20,SS_REALSIZEIMAGE
+    CONTROL         "Spin1",IDC_ER_ICONSPIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_ALIGNLEFT | UDS_HORZ,173,44,28,8
+    RTEXT           "&Category :",IDC_STATIC,24,44,40,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_ER_CAT,68,45,92,79,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_ER_CAT
+    LTEXT           "&Description :",IDC_STATIC,24,64,40,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_ER_NAME,68,64,140,12,ES_AUTOHSCROLL
+    CONTROL         "Open at &Startup",IDC_ER_START,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,12,100,68,12
+    GROUPBOX        "",IDC_STATIC,4,4,208,80,BS_FLAT
+    GROUPBOX        "",IDC_STATIC,4,88,84,64,BS_FLAT
+    CONTROL         "&Keep open",IDC_ER_KEEPOPEN,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,24,112,56,12
+END
+
+IDD_ER_OUTCOME_XY DIALOGEX 0, 0, 216, 157
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Outcomes"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Phase Plot",IDC_STATIC,4,4,104,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,12,12,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_XOUTCOME,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,14,60,80,0,
+                    HIDC_ER_XOUTCOME
+    LTEXT           "&Y axis : ",IDC_STATIC,12,28,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_YOUTCOME,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,30,60,80,0,
+                    HIDC_ER_YOUTCOME
+    GROUPBOX        "Isocline 1",IDC_STATIC,4,52,104,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,12,60,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_XISO1,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,61,60,80,0,
+                    HIDC_ER_XISO1
+    LTEXT           "&Y axis : ",IDC_STATIC,12,76,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_YISO1,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,77,60,80,0,
+                    HIDC_ER_YISO1
+    GROUPBOX        "Isocline 2",IDC_STATIC,4,100,104,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,12,108,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_XISO2,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,110,60,80,0,
+                    HIDC_ER_XISO2
+    LTEXT           "&Y axis : ",IDC_STATIC,12,124,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_YISO2,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,40,126,60,80,0,
+                    HIDC_ER_YISO2
+    GROUPBOX        "Stability Point",IDC_STATIC,112,100,100,44,BS_FLAT
+    LTEXT           "&X axis : ",IDC_STATIC,120,112,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_XSTAB,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,148,112,60,80,0,
+                    HIDC_ER_XSTAB
+    LTEXT           "&Y axis : ",IDC_STATIC,120,128,28,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_ER_YSTAB,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,148,128,60,80,0,
+                    HIDC_ER_YSTAB
+    GROUPBOX        "&Experimental Sets",IDC_STATIC,112,4,100,92,BS_FLAT
+    CONTROL         "Custom",IDC_ER_EXPSETGRID,"MFCGridCtrl",WS_TABSTOP,120,
+                    16,84,76,0,HIDC_ER_EXPSETGRID
+END
+
+IDD_ANIMPOLYGON_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Polygon"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Linked to :",IDC_STATIC,84,16,124,92,BS_FLAT
+    LTEXT           "&From :",IDC_STATIC,92,32,20,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_START,120,32,80,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_START
+    CONTROL         "Tree1",IDC_POLYGON,"SysTreeView32",TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_INFOTIP | TVS_FULLROWSELECT | 
+                    WS_GROUP | WS_TABSTOP,8,20,72,88,WS_EX_CLIENTEDGE,
+                    HIDC_POLYGON
+    PUSHBUTTON      "&Add ...",IDC_POLYG_ADD,8,4,28,12,WS_GROUP,0,
+                    HIDC_POLYG_ADD
+    PUSHBUTTON      "&Del...",IDC_POLYG_DEL,52,4,28,12,WS_GROUP,0,
+                    HIDC_POLYG_DEL
+    LTEXT           "Attach &point :",IDC_STATIC,92,56,44,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_START_PT,136,56,64,64,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_START_PT
+END
+
+IDD_ANIMINTER_PAGE DIALOGEX 0, 0, 216, 114
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Interaction"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Can be dragged at run time",IDC_STATIC,4,4,208,40,
+                    BS_FLAT
+    CONTROL         "&None",IDC_DRAG,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,12,16,33,10,0,HIDC_DRAG
+    CONTROL         "X axis",IDC_DRAG2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,56,16,35,10,0,HIDC_DRAG2
+    CONTROL         "XY axes",IDC_DRAG3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,12,28,42,10,0,HIDC_DRAG3
+    CONTROL         "Y axis",IDC_DRAG4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,56,28,35,10,0,HIDC_DRAG4
+    RTEXT           "X :",IDC_STATIC,112,12,16,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_DRAG_X,132,12,76,79,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Y :",IDC_STATIC,112,28,16,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_DRAG_Y,132,28,76,79,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Can be resized at run time",IDC_STATIC,4,48,208,40,
+                    BS_FLAT
+    CONTROL         "&None",IDC_DRAG5,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,12,60,33,10,0,HIDC_DRAG5
+    CONTROL         "X axis",IDC_DRAG6,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,56,60,35,10,0,HIDC_DRAG6
+    CONTROL         "XY axes",IDC_DRAG7,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,12,72,42,10,0,HIDC_DRAG7
+    CONTROL         "Y axis",IDC_DRAG8,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,56,72,35,10,0,HIDC_DRAG8
+    RTEXT           "W :",IDC_STATIC,112,56,16,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_RESIZE_W,132,56,76,79,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "H :",IDC_STATIC,112,72,16,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_RESIZE_H,132,72,76,79,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MAPREL,132,96,76,79,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Map Relation using :",IDC_STATIC,28,96,100,12,
+                    SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SIMULPARAM_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 91
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_SIMULTIMER_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_SELECTPARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_ANIMTEXT_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMOBJPOS_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMPICT_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMVALUE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMSHAPE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_DEFINE_EXPSET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_DEFINE_MODEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 238
+    END
+
+    IDD_DEFINE_MER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_EDITINTERVAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_FORMAT_TABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_FORMAT_GRAPH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ANIMDENSITY_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_FORMAT_TABLE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_FORMAT_ANIMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_FORMAT_GRAPH2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_FORMAT_PARAMETER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_IDENTITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_SIMULTABLE_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_FORMAT_PHASEPLOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ANIMOBJSIZE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMLINK_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMSECTOR_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_DEFINEOUTCOME_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_ANIMPICTDENS_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ER_TRANSLATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_PREF_CAT_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_PREF_CONFIG_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_VIEW_CONTROLLER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_DEFINE_OUTCOME_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_FORMAT_CHART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_FORMAT_TEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ER_FORMAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_WELCOMEBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 13
+    END
+
+    IDD_EDIT_VALUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 135
+        VERTGUIDE, 1
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_MODEL_MODEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 33
+    END
+
+    IDD_MODEL_ADD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_PREF_SIMUL_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMATION_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_SORTERDLG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_BPMESSAGE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_MODEL_BUILD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_MODEL_BUILDPROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_LU_MODELPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_LU_EXPSETPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_LU_INSTRUCTPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_LU_MERPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ER_OUTCOME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ER_EXTREP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ER_OUTCOME_XY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ANIMPOLYGON_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_ANIMINTER_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDR_SIMULGRAPH          BITMAP  MOVEABLE PURE   "res\\toolgraph.bmp"
+IDR_SIMUL_CONTEXT       BITMAP  MOVEABLE PURE   "res\\ToolInst.bmp"
+IDB_BOOKS               BITMAP  DISCARDABLE     "res\\books.bmp"
+IDB_BEANY               BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_SQUARE              BITMAP  DISCARDABLE     "res\\square.bmp"
+IDB_ROUND               BITMAP  DISCARDABLE     "res\\round.bmp"
+IDB_ER_ICONS            BITMAP  DISCARDABLE     "res\\component.bmp"
+IDB_VAR_ICONS           BITMAP  DISCARDABLE     "res\\smallcpn.bmp"
+IDB_TREE_CTRL_OPTIONS   BITMAP  DISCARDABLE     "res\\tree_ctrl.bmp"
+IDR_SIMULANIM           BITMAP  MOVEABLE PURE   "res\\toolani.bmp"
+IDR_SIMULPARAM_TMPL     BITMAP  MOVEABLE PURE   "res\\toolpar.bmp"
+IDB_ANIM_COMPONENT      BITMAP  DISCARDABLE     "res\\anim_cpn.bmp"
+IDR_SIMULTIMER          BITMAP  MOVEABLE PURE   "res\\tooltimer.bmp"
+IDB_TIME_BREAKPOINT     BITMAP  DISCARDABLE     "res\\time_bre.bmp"
+IDB_RADIAL_BACKGROUND_BITMAP BITMAP  DISCARDABLE     "res\\Dialbk.bmp"
+IDR_SIMULANIM_ALIGN     BITMAP  MOVEABLE PURE   "res\\toolani_align.bmp"
+IDR_TASKBAR             BITMAP  MOVEABLE PURE   "res\\taskbar.bmp"
+IDR_SIMULANIM_CPNT      BITMAP  MOVEABLE PURE   "res\\toolani_cpnt.bmp"
+IDB_PUSHPIN             BITMAP  DISCARDABLE     "RES\\pushpin.bmp"
+IDB_CONTROLLER          BITMAP  DISCARDABLE     "res\\controll.bmp"
+IDB_CONTR_TIMER         BITMAP  DISCARDABLE     "res\\contr_ti.bmp"
+IDR_TASKBAR_BIS         BITMAP  MOVEABLE PURE   "res\\taskbar1.bmp"
+IDB_ANIM_SELECTOR       BITMAP  DISCARDABLE     "res\\anim_sel.bmp"
+IDB_TIME_SMBREAKPOINT   BITMAP  DISCARDABLE     "res\\time_smb.bmp"
+IDB_ANTRED              BITMAP  DISCARDABLE     "res\\antred.bmp"
+IDB_ANTBLACK            BITMAP  DISCARDABLE     "res\\antblack.bmp"
+IDB_RATKANG             BITMAP  DISCARDABLE     "res\\ratkang.bmp"
+IDB_RATPOCK             BITMAP  DISCARDABLE     "res\\ratpock.bmp"
+IDB_FINRED              BITMAP  DISCARDABLE     "res\\finred.bmp"
+IDB_FINGREEN            BITMAP  DISCARDABLE     "res\\fingreen.bmp"
+IDB_BARNACLE            BITMAP  DISCARDABLE     "res\\barnacle.bmp"
+IDB_MERSORT             BITMAP  DISCARDABLE     "res\\mersort.bmp"
+IDB_ANIM_CPNTPAGE       BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_BREAKPOINT_BANNER   BITMAP  DISCARDABLE     "res\\fond.bmp"
+IDR_MAINFRAME_BIS       BITMAP  MOVEABLE PURE   "res\\mainfram.bmp"
+IDB_BP_INFO             BITMAP  DISCARDABLE     "res\\bp_info.bmp"
+IDB_BP_ACTION           BITMAP  DISCARDABLE     "res\\bp_actio.bmp"
+IDB_BP_HYPOT            BITMAP  DISCARDABLE     "res\\bp_hypot.bmp"
+IDB_BP_TEST             BITMAP  DISCARDABLE     "res\\bp_test.bmp"
+IDB_MODEL_ICON          BITMAP  DISCARDABLE     "res\\model_ic.bmp"
+IDB_MODEL_DESIGN        BITMAP  DISCARDABLE     "res\\model_de.bmp"
+IDB_MODEL_LU            BITMAP  DISCARDABLE     "res\\model_lu.bmp"
+IDB_MODEL_ERS           BITMAP  DISCARDABLE     "res\\model_er.bmp"
+IDB_TIME_ADDBP          BITMAP  DISCARDABLE     "res\\time_add.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    BUTTON      ID_EDIT_CLEAR
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+IDR_SIMULGRAPH TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_SELECTDATA
+    SEPARATOR
+    BUTTON      ID_TASK_CANCELTASK
+    SEPARATOR
+    BUTTON      ID_TRANS_INDEPENDENT
+    BUTTON      ID_TRANS_MAPRELATION
+    BUTTON      ID_TRANS_DYNALINKED
+END
+
+IDR_SIMUL_CONTEXT TOOLBAR DISCARDABLE  16, 20
+BEGIN
+    BUTTON      ID_INSTRUCTION_PREVLU
+    BUTTON      ID_INSTRUCTION_AUTHMODE
+    BUTTON      ID_INSTRUCTION_NEXTLU
+    SEPARATOR
+    BUTTON      ID_INSTRUCTION_ADDUNIT
+    BUTTON      ID_INSTRUCTION_UNITPROP
+    SEPARATOR
+    BUTTON      ID_INSTRUCTION_ADDER
+    BUTTON      ID_INSTRUCTION_ERPROP
+    BUTTON      ID_INSTRUCTION_SORTER
+    SEPARATOR
+    BUTTON      ID_INSTRUCTION_TRYER
+    BUTTON      ID_INSTRUCTION_SAVEPOS
+END
+
+IDR_SIMULANIM TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_ANIMATION_PREVEXPSET
+    BUTTON      ID_INSTRUCTION_AUTHMODE
+    BUTTON      ID_ANIMATION_NEXTEXPSET
+    SEPARATOR
+    BUTTON      ID_TASK_CANCELTASK
+    SEPARATOR
+    BUTTON      ID_TRANS_INDEPENDENT
+    BUTTON      ID_TRANS_MAPRELATION
+    BUTTON      ID_TRANS_DYNALINKED
+END
+
+IDR_SIMULPARAM_TMPL TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_PARAMETERS_UPDATECHANGES
+    BUTTON      ID_PARAMETERS_RESETVALUES
+    SEPARATOR
+    BUTTON      ID_PARAMETERS_ADDEXPSET
+    BUTTON      ID_PARAMETERS_REMOVEEXPSET
+    SEPARATOR
+    BUTTON      ID_BUTTON32833
+END
+
+IDR_SIMULTIMER TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_TIMER_PLAY
+END
+
+IDR_SIMULANIM_ALIGN TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_ANIMATION_SHOWGRID
+    SEPARATOR
+    BUTTON      ID_ANIM_ALIGNLEFT
+    BUTTON      ID_ANIM_ALIGNCENTER
+    BUTTON      ID_ANIM_ALIGNRIGHT
+    SEPARATOR
+    BUTTON      ID_ANIM_ALIGNTOP
+    BUTTON      ID_ANIM_ALIGNMIDDLE
+    BUTTON      ID_ANIM_ALIGNBOTTOM
+    SEPARATOR
+    BUTTON      ID_ANIM_ALIGNHOR
+    BUTTON      ID_ANIM_ALIGNVER
+    SEPARATOR
+    BUTTON      ID_ANIMATION_FORWARD
+    BUTTON      ID_ANIMATION_BACKWARD
+END
+
+IDR_TASKBAR TOOLBAR DISCARDABLE  47, 15
+BEGIN
+    BUTTON      ID_VIEW_ERS
+END
+
+IDR_SIMULANIM_CPNT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_ANIMATION_SHOWPROPERTIES
+    SEPARATOR
+    BUTTON      ID_ANIMATION_TEXT
+    BUTTON      ID_ANIMATION_VALUE
+    BUTTON      ID_ANIMATION_RECT
+    BUTTON      ID_ANIMATION_IMAGE
+    BUTTON      ID_ANIMATION_DENSITY
+    BUTTON      ID_ANIMATION_CATER
+    SEPARATOR
+    BUTTON      ID_ANIMATION_CONNECT
+    BUTTON      ID_ANIMATION_POLYGON
+    SEPARATOR
+    BUTTON      ID_ANIMATION_SECTOR
+    BUTTON      ID_ANIMATION_ADDSECTOR
+END
+
+IDR_TASKBAR_BIS TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_TASK_MAPFACT
+    BUTTON      ID_TASK_MAPRELATION
+    BUTTON      ID_TASK_SUPPORTACTION
+    SEPARATOR
+    BUTTON      ID_TASK_CANCELTASK
+END
+
+IDR_MAINFRAME_BIS TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Simul.ico"
+IDR_SIMULPARAM_TMPL     ICON    DISCARDABLE     "res\\mdiparam.ico"
+IDR_SIMULTYPE           ICON    DISCARDABLE     "res\\MERseq.ico"
+IDR_SIMULTIMER          ICON    DISCARDABLE     "res\\mditimer.ico"
+IDR_SIMULGRAPH          ICON    DISCARDABLE     "res\\mdigraph.ico"
+IDR_SIMULPIE            ICON    DISCARDABLE     "res\\mdichart.ico"
+IDR_SIMULTABLE          ICON    DISCARDABLE     "res\\mditable.ico"
+IDR_SIMULTEXT           ICON    DISCARDABLE     "res\\mditext.ico"
+IDR_SIMULXYGRAPH        ICON    DISCARDABLE     "res\\mdixygraph.ico"
+IDR_SIMUL_CONTEXT       ICON    DISCARDABLE     "res\\idr_desi.ico"
+IDR_SIMULANIM           ICON    DISCARDABLE     "res\\mdianim.ico"
+IDI_ICONPREV            ICON    DISCARDABLE     "res\\iconprev.ico"
+IDI_ICONNEXT            ICON    DISCARDABLE     "res\\iconnext.ico"
+IDI_ICONRUN             ICON    DISCARDABLE     "res\\iconrun.ico"
+IDR_VIEWCONTROLLER      ICON    DISCARDABLE     "res\\mdictrl.ico"
+IDR_SIMULHISTOGRAM      ICON    DISCARDABLE     "res\\mdihisto.ico"
+IDR_SIMUL_WELCOME       ICON    DISCARDABLE     "res\\idr_welc.ico"
+IDR_VIEWNEWLISTMODEL_TMPL ICON    DISCARDABLE     "mdi.ico"
+IDI_VIEW_ICON           ICON    DISCARDABLE     "res\\viewicon.ico"
+IDI_VIEW_LIST           ICON    DISCARDABLE     "res\\viewlist.ico"
+IDR_SIMULEQUATION       ICON    DISCARDABLE     "res\\idr_simu.ico"
+IDR_SIMULRULER          ICON    DISCARDABLE     "res\\idr_ruler.ico"
+IDR_SIMULGLASS          ICON    DISCARDABLE     "res\\idr_glass.ico"
+IDR_SIMULBOOK           ICON    DISCARDABLE     "res\\idr_book.ico"
+IDR_SIMULGRAPHLOG       ICON    DISCARDABLE     "res\\idr_glog.ico"
+IDR_SIMULNODE           ICON    DISCARDABLE     "res\\idr_node.ico"
+IDR_SIMULTHERMO         ICON    DISCARDABLE     "res\\idr_therm.ico"
+IDR_VIEWBUILDMODEL_TMPL ICON    DISCARDABLE     "res\\idr_view.ico"
+IDR_VIEWHTMLWELCOME_TMPL ICON    DISCARDABLE     "res\\ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_SIMULANIM ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_SELECTALL,      VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_ANIMATION_NEXTEXPSET, VIRTKEY, NOINVERT
+    VK_SUBTRACT,    ID_ANIMATION_PREVEXPSET, VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "&Switch Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM "Help &Index",                 ID_HELP_INDEX
+        MENUITEM "&Using Help",                 ID_HELP_USING
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&Simulation"
+    BEGIN
+        MENUITEM "&Update models...",           ID_SIMULATION_UPDATEMODELS
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULPARAM_TMPL MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+        POPUP "Interaction", GRAYED
+        BEGIN
+            MENUITEM "Ti&mer",                      ID_VIEW_TIMER
+            MENUITEM "&Parameters",                 ID_VIEW_PARAM
+            MENUITEM SEPARATOR
+            MENUITEM "&Chart",                      ID_VIEW_CHART
+            MENUITEM "Ta&ble",                      ID_VIEW_TABLE
+            MENUITEM "&Model",                      ID_VIEW_MODEL
+            MENUITEM "&Graph",                      ID_VIEW_GRAPH
+            MENUITEM "&XY-Graph",                   ID_VIEW_XYGRAPH
+            MENUITEM "&Animation",                  ID_VIEW_ANIM
+        END
+    END
+    POPUP "&Parameters"
+    BEGIN
+        MENUITEM "&Apply changes",              ID_PARAMETERS_UPDATECHANGES
+        MENUITEM "&Reset values",               ID_PARAMETERS_RESETVALUES
+        MENUITEM SEPARATOR
+        MENUITEM "A&dd Exp. Set",               ID_PARAMETERS_ADDEXPSET
+        MENUITEM "Re&move Exp. Set",            ID_PARAMETERS_REMOVEEXPSET
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MDI1...",              ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULTIMER MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "Ti&mer"
+    BEGIN
+        MENUITEM "&Restart Simulation...",      ID_TIMER_RESTART
+        MENUITEM SEPARATOR
+        MENUITEM "&Start",                      ID_TIMER_PLAY
+        MENUITEM "&Stop",                       ID_TIMER_STOP
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MDI1...",              ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULPIE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&Chart"
+    BEGIN
+        MENUITEM "&Bar chart",                  ID_CHART_BAR
+        MENUITEM "&Pie Chart",                  ID_CHART_PIE
+        MENUITEM "&Line Chart",                 ID_CHART_LINE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULTABLE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+        MENUITEM "ERs",                         ID_VIEW_ERS
+    END
+    POPUP "T&able"
+    BEGIN
+        MENUITEM "Select Data",                 ID_SELECTDATA
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About Simul...",             ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULTEXT MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&Model", GRAYED
+    BEGIN
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULGRAPH MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&Graph"
+    BEGIN
+        MENUITEM "Select Data",                 ID_SELECTDATA
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULANIM MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll\tCtrl+A",         ID_EDIT_SELECTALL
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&Animation"
+    BEGIN
+        MENUITEM "Show &Grid",                  ID_ANIMATION_SHOWGRID
+        MENUITEM "Show &Properties",            ID_ANIMATION_SHOWPROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Add in sector",              ID_ANIMATION_ADDSECTOR
+        POPUP "&Components"
+        BEGIN
+            MENUITEM "&Shape",                      ID_ANIMATION_RECT
+            MENUITEM "&Text",                       ID_ANIMATION_TEXT
+            MENUITEM "&Value",                      ID_ANIMATION_VALUE
+            MENUITEM "&Picture",                    ID_ANIMATION_IMAGE
+            MENUITEM SEPARATOR
+            MENUITEM "C&aterpillar",                ID_ANIMATION_CATER
+            MENUITEM "Pop. &Density",               ID_ANIMATION_DENSITY
+            MENUITEM SEPARATOR
+            MENUITEM "&Connector",                  ID_ANIMATION_CONNECT
+            MENUITEM "Polygon",                     ID_ANIMATION_POLYGON
+            MENUITEM SEPARATOR
+            MENUITEM "S&ector",                     ID_ANIMATION_SECTOR
+        END
+        POPUP "Alig&nment"
+        BEGIN
+            MENUITEM "Align &Left",                 ID_ANIM_ALIGNLEFT
+            MENUITEM "Align &Center",               ID_ANIM_ALIGNCENTER
+            MENUITEM "Align &Right",                ID_ANIM_ALIGNRIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "Align &Top",                  ID_ANIM_ALIGNTOP
+            MENUITEM "Align &Middle",               ID_ANIM_ALIGNMIDDLE
+            MENUITEM "Align &Bottom",               ID_ANIM_ALIGNBOTTOM
+            MENUITEM SEPARATOR
+            MENUITEM "Distribute &Horiz.",          ID_ANIM_ALIGNHOR
+            MENUITEM "Distribute &Vertic.",         ID_ANIM_ALIGNVER
+            MENUITEM SEPARATOR
+            MENUITEM "Send &Forward",               ID_ANIMATION_FORWARD
+            MENUITEM "&Send Backward",              ID_ANIMATION_BACKWARD
+        END
+        MENUITEM "&Show Selector",              ID_ANIMATION_SELECTOBJECT
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMULXYGRAPH MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design ..."
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&XY-Graph"
+    BEGIN
+        MENUITEM "Select Data",                 ID_SELECTDATA
+        MENUITEM SEPARATOR
+        POPUP "Scale Type"
+        BEGIN
+            MENUITEM "&Linear",                     ID_XYGRAPH_SCALETYPE_LINEAR
+
+            MENUITEM "&X-Log",                      ID_XYGRAPH_SCALETYPE_XLOG
+
+            MENUITEM "&Y-Log",                      ID_XYGRAPH_SCALETYPE_YLOG
+
+            MENUITEM "XY-L&og",                     ID_XYGRAPH_SCALETYPE_XYLOG
+
+        END
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMUL_CONTEXT MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design"
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&Instruction"
+    BEGIN
+        MENUITEM "&Add Unit ...",               ID_INSTRUCTION_ADDUNIT
+        MENUITEM "&Unit Properties ...",        ID_INSTRUCTION_UNITPROP
+        MENUITEM SEPARATOR
+        MENUITEM "Add &ER ...",                 ID_INSTRUCTION_ADDER
+        MENUITEM "S&ort ER...",                 ID_INSTRUCTION_SORTER
+        MENUITEM "ER &Properties ...",          ID_INSTRUCTION_ERPROP
+        MENUITEM "&Try ER",                     ID_INSTRUCTION_TRYER
+        MENUITEM SEPARATOR
+        MENUITEM "&Save ERs' positions",        ID_INSTRUCTION_SAVEPOS
+        MENUITEM SEPARATOR
+        MENUITEM "Pre&vious Unit",              ID_INSTRUCTION_PREVLU
+        MENUITEM "E&xecute Unit",               ID_INSTRUCTION_AUTHMODE
+        MENUITEM "&Next Unit",                  ID_INSTRUCTION_NEXTLU
+        MENUITEM SEPARATOR
+        MENUITEM "Multi-panes",                 ID_INSTRUCTION_MULTIPANES
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_ANIM_CTX MENU DISCARDABLE 
+BEGIN
+    POPUP "&Animation"
+    BEGIN
+        MENUITEM "Show &Components",            ID_ANIM_CONSTRUCTION
+        MENUITEM "Show &Alignment",             ID_ANIM_ALIGN
+        MENUITEM "&Show Selector",              ID_ANIMATION_SELECTOBJECT
+    END
+END
+
+IDR_DROP_OPEN MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "OnToolbarDropArrow"
+    BEGIN
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+    END
+END
+
+IDR_VIEWCONTROLLER MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design"
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Assignment",                 ID_VIEW_WELCOME
+    END
+    POPUP "&Controller"
+    BEGIN
+        MENUITEM "&Restart Simulation...",      ID_TIMER_RESTART
+        MENUITEM "&Start",                      ID_TIMER_PLAY
+        MENUITEM "Stop",                        ID_TIMER_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Apply changes",              ID_PARAMETERS_UPDATECHANGES
+        MENUITEM "Reset &values",               ID_PARAMETERS_RESETVALUES
+        MENUITEM "A&dd Exp. Set",               ID_PARAMETERS_ADDEXPSET
+        MENUITEM "Re&move Exp. Set",            ID_PARAMETERS_REMOVEEXPSET
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_SIMUL_WELCOME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences...",              ID_FILE_PREF
+        MENUITEM "Switch &Mode ...",            ID_FILE_SWITCHMODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Tas&k Bar",                   ID_VIEW_TASKBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen",                ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Design", GRAYED
+        BEGIN
+            MENUITEM "&Simulation",                 ID_VIEW_DESIGN_SIMULATION
+
+            MENUITEM "&Instruction",                ID_VIEW_DESIGN_INSTRUCTION
+
+        END
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DEMIST...",            ID_APP_ABOUT
+    END
+END
+
+IDR_VIEWNEWLISTMODEL_TMPL MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Translation"
+    BEGIN
+        MENUITEM "&Independent",                ID_TRANS_INDEPENDENT
+        MENUITEM "&Map Relation",               ID_TRANS_MAPRELATION
+        MENUITEM "&Dyna-Linked",                ID_TRANS_DYNALINKED
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MDI1...",              ID_APP_ABOUT
+    END
+END
+
+IDR_VIEWBUILDMODEL_TMPL MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Select All\tCtrl+A",         ID_EDIT_SELECT_ALL
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MDI1...",              ID_APP_ABOUT
+    END
+END
+
+IDR_DROP_TEXT MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Select All\tCtrl+A",         ID_EDIT_SELECT_ALL
+    END
+END
+
+IDR_VIEWHTMLWELCOME_TMPL MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MDI1...",              ID_APP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Simul.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ANIMTEXT_PAGE DLGINIT
+BEGIN
+    IDC_ALIGN, 0x403, 8, 0
+0x754a, 0x7473, 0x6669, 0x0079, 
+    IDC_ALIGN, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_ALIGN, 0x403, 7, 0
+0x6543, 0x746e, 0x7265, "\000" 
+    IDC_ALIGN, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    0
+END
+
+IDD_ANIMOBJPOS_PAGE DLGINIT
+BEGIN
+    IDC_COMPONENT, 0x403, 7, 0
+0x4e3c, 0x6e6f, 0x3e65, "\000" 
+    0
+END
+
+IDD_ANIMVALUE_PAGE DLGINIT
+BEGIN
+    IDC_ALIGN, 0x403, 8, 0
+0x754a, 0x7473, 0x6669, 0x0079, 
+    IDC_ALIGN, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_ALIGN, 0x403, 7, 0
+0x6543, 0x746e, 0x7265, "\000" 
+    IDC_ALIGN, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    0
+END
+
+IDD_DEFINE_MER DLGINIT
+BEGIN
+    IDC_RUNMODE, 0x403, 4, 0
+0x7552, 0x006e, 
+    IDC_RUNMODE, 0x403, 7, 0
+0x6552, 0x6976, 0x7765, "\000" 
+    0
+END
+
+IDD_FORMAT_TABLE2 DLGINIT
+BEGIN
+    IDC_COMBO_CSEL, 0x403, 20, 0
+0x6948, 0x6867, 0x696c, 0x6867, 0x2074, 0x6573, 0x656c, 0x7463, 0x6f69, 
+0x006e, 
+    IDC_COMBO_LSEL, 0x403, 20, 0
+0x6948, 0x6867, 0x696c, 0x6867, 0x2074, 0x6573, 0x656c, 0x7463, 0x6f69, 
+0x006e, 
+    IDC_COMBO_CLSEL, 0x403, 20, 0
+0x6948, 0x6867, 0x696c, 0x6867, 0x2074, 0x6573, 0x656c, 0x7463, 0x6f69, 
+0x006e, 
+    0
+END
+
+IDD_IDENTITY DLGINIT
+BEGIN
+    IDC_COMBO_NAME, 0x403, 8, 0
+0x694e, 0x6f63, 0x616c, 0x0073, 
+    IDC_COMBO_NAME, 0x403, 8, 0
+0x6853, 0x6161, 0x6f72, 0x006e, 
+    IDC_COMBO_NAME, 0x403, 4, 0
+0x6542, 0x006e, 
+    IDC_COMBO_NAME, 0x403, 19, 0
+0x203c, 0x7541, 0x6874, 0x726f, 0x6e69, 0x2067, 0x6f6d, 0x6564, 0x3e20, 
+"\000" 
+    0
+END
+
+IDD_FORMAT_PHASEPLOT DLGINIT
+BEGIN
+    IDC_SCALE, 0x403, 7, 0
+0x694c, 0x656e, 0x7261, "\000" 
+    IDC_SCALE, 0x403, 6, 0
+0x2d58, 0x6f4c, 0x0067, 
+    IDC_SCALE, 0x403, 6, 0
+0x2d59, 0x6f4c, 0x0067, 
+    IDC_SCALE, 0x403, 7, 0
+0x5958, 0x4c2d, 0x676f, "\000" 
+    0
+END
+
+IDD_ANIMLINK_PAGE DLGINIT
+BEGIN
+    IDC_START, 0x403, 7, 0
+0x4e3c, 0x6e6f, 0x3e65, "\000" 
+    IDC_START_PT, 0x403, 4, 0
+0x6f54, 0x0070, 
+    IDC_START_PT, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_START_PT, 0x403, 7, 0
+0x6f42, 0x7474, 0x6d6f, "\000" 
+    IDC_START_PT, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    IDC_START_PT, 0x403, 7, 0
+0x6543, 0x746e, 0x6572, "\000" 
+    IDC_START_PT, 0x403, 9, 0
+0x6f54, 0x2d70, 0x654c, 0x7466, "\000" 
+    IDC_START_PT, 0x403, 10, 0
+0x6f54, 0x2d70, 0x6952, 0x6867, 0x0074, 
+    IDC_START_PT, 0x403, 12, 0
+0x6f42, 0x7474, 0x6d6f, 0x4c2d, 0x6665, 0x0074, 
+    IDC_START_PT, 0x403, 13, 0
+0x6f42, 0x7474, 0x6d6f, 0x522d, 0x6769, 0x7468, "\000" 
+    IDC_END, 0x403, 7, 0
+0x4e3c, 0x6e6f, 0x3e65, "\000" 
+    IDC_END_PT, 0x403, 4, 0
+0x6f54, 0x0070, 
+    IDC_END_PT, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_END_PT, 0x403, 7, 0
+0x6f42, 0x7474, 0x6d6f, "\000" 
+    IDC_END_PT, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    IDC_END_PT, 0x403, 7, 0
+0x6543, 0x746e, 0x6572, "\000" 
+    IDC_END_PT, 0x403, 9, 0
+0x6f54, 0x2d70, 0x654c, 0x7466, "\000" 
+    IDC_END_PT, 0x403, 10, 0
+0x6f54, 0x2d70, 0x6952, 0x6867, 0x0074, 
+    IDC_END_PT, 0x403, 12, 0
+0x6f42, 0x7474, 0x6d6f, 0x4c2d, 0x6665, 0x0074, 
+    IDC_END_PT, 0x403, 13, 0
+0x6f42, 0x7474, 0x6d6f, 0x522d, 0x6769, 0x7468, "\000" 
+    0
+END
+
+IDD_ANIMSHAPE_PAGE DLGINIT
+BEGIN
+    IDC_SHAPE, 0x403, 10, 0
+0x6552, 0x7463, 0x6e61, 0x6c67, 0x0065, 
+    IDC_SHAPE, 0x403, 8, 0
+0x6c45, 0x696c, 0x7370, 0x0065, 
+    IDC_SHAPE, 0x403, 8, 0
+0x6944, 0x6d61, 0x6e6f, 0x0064, 
+    IDC_SHAPE, 0x403, 14, 0
+0x7254, 0x6169, 0x676e, 0x656c, 0x2820, 0x7055, 0x0029, 
+    IDC_SHAPE, 0x403, 16, 0
+0x7254, 0x6169, 0x676e, 0x656c, 0x2820, 0x6f44, 0x6e77, 0x0029, 
+    0
+END
+
+IDD_FORMAT_GRAPH DLGINIT
+BEGIN
+    IDC_SCALE, 0x403, 7, 0
+0x694c, 0x656e, 0x7261, "\000" 
+    IDC_SCALE, 0x403, 6, 0
+0x2d59, 0x6f4c, 0x0067, 
+    0
+END
+
+IDD_MODEL_BUILDPROP DLGINIT
+BEGIN
+    IDD_MODEL_BUILDPROP_NUM, 0x403, 23, 0
+0x7434, 0x2068, 0x724f, 0x6564, 0x2072, 0x7552, 0x676e, 0x2d65, 0x754b, 
+0x7474, 0x2061, "\000" 
+    0
+END
+
+IDD_LU_MODELPAGE DLGINIT
+BEGIN
+    IDD_SIM_METHOD, 0x403, 23, 0
+0x7434, 0x2068, 0x724f, 0x6564, 0x2072, 0x7552, 0x676e, 0x2d65, 0x754b, 
+0x7474, 0x2061, "\000" 
+    0
+END
+
+IDD_ER_EXTREP DLGINIT
+BEGIN
+    IDC_ER_RUNMODE, 0x403, 4, 0
+0x7552, 0x006e, 
+    IDC_ER_RUNMODE, 0x403, 7, 0
+0x6552, 0x6976, 0x7765, "\000" 
+    0
+END
+
+IDD_ANIMPOLYGON_PAGE DLGINIT
+BEGIN
+    IDC_START, 0x403, 7, 0
+0x4e3c, 0x6e6f, 0x3e65, "\000" 
+    IDC_START_PT, 0x403, 4, 0
+0x6f54, 0x0070, 
+    IDC_START_PT, 0x403, 5, 0
+0x654c, 0x7466, "\000" 
+    IDC_START_PT, 0x403, 7, 0
+0x6f42, 0x7474, 0x6d6f, "\000" 
+    IDC_START_PT, 0x403, 6, 0
+0x6952, 0x6867, 0x0074, 
+    IDC_START_PT, 0x403, 7, 0
+0x6543, 0x746e, 0x6572, "\000" 
+    IDC_START_PT, 0x403, 9, 0
+0x6f54, 0x2d70, 0x654c, 0x7466, "\000" 
+    IDC_START_PT, 0x403, 10, 0
+0x6f54, 0x2d70, 0x6952, 0x6867, 0x0074, 
+    IDC_START_PT, 0x403, 12, 0
+0x6f42, 0x7474, 0x6d6f, 0x4c2d, 0x6665, 0x0074, 
+    IDC_START_PT, 0x403, 13, 0
+0x6f42, 0x7474, 0x6d6f, 0x522d, 0x6769, 0x7468, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DELETE              CURSOR  DISCARDABLE     "res\\delete.cur"
+IDC_SPLITTER            CURSOR  DISCARDABLE     "res\\Splitter.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "DEMIST"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    ERR_EXPSET_LOWERLIMIT   "A least one Experimental Set is required."
+    ERR_LUNIT_LOWERLIMIT    "A least one Learning Unit is required."
+    ERR_LUNIT_MAXERACTIVE   "The maximum allowed number of E.R. is reached.\nClose one or many windows in order to open a new E.R."
+    ERR_SIMULATION_RESTART  "The simulation will be restarted : all modifications will be deleted."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_SIMULTYPE           "Simulation Design\nSimul\nSimul\nMER Files (*.mer)\n.mer\nMer.Document\nDEMIST Document"
+    IDR_VIEWCONTROLLER      "Controller\n\n\n\n\n\n"
+    IDR_SIMULPIE            "Pie Chart\n\n\n\n\n\n"
+    IDR_SIMULTEXT           "Text\n\n\n\n\n\n"
+    IDR_SIMULGRAPH          "Graph\n\n\n\n\n\n"
+    IDR_SIMULANIM           "Animation\n\n\n\n\n\n"
+    IDR_SIMULTABLE          "Table\n\n\n\n\n\n"
+    IDR_SIMULHISTOGRAM      "Bar Chart\n\n\n\n\n\n"
+    IDR_SIMULXYGRAPH        "XY-Graph\n\n\n\n\n\n"
+    IDR_SIMULTIMER          "Timer\n\n\n\n\n\n"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_SIMUL_CONTEXT       "Context DesignXXXXX\n\n\n\n\n\n\n"
+    IDR_SIMUL_WELCOME       "Welcome !\n\n\n\n\n\n\n"
+    IDR_SIMULPARAM_TMPL     "Parameters\n\n\n\n\n\n"
+    IDR_VIEWNEWLISTMODEL_TMPL 
+                            "\nViewNewListModel\nViewNe\nViewNe Files (*.vie)\n.vie\nViewNewListModel.Document\nViewNe Document"
+    IDR_VIEW_MULTIPANES     "Mulit-Panes\n\n\n\n\n\n"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "DEMIST"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_FULLSCREEN      "Toggles full screen mode on and off"
+    ID_VIEW_CHART           "Display the chart"
+    ID_VIEW_PARAM           "Display the parameters"
+    ID_VIEW_TABLE           "Display the table"
+    ID_VIEW_MODEL           "Display the text"
+    ID_VIEW_GRAPH           "Display the Time/Y Graph"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    AFX_IDS_DELETE_COMPONENT 
+                            "Do you really want to delete the selected item(s) ?"
+    IDC_OPTIONSTREE_OPTIONS "option"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ANIM            "Display the animation"
+    ID_VIEW_TIMER           "Display the timer"
+    ID_VIEW_XYGRAPH         "Display the X/Y Graph"
+    ID_VIEW_DESIGN_SIMULATION "Simulation design"
+    ID_VIEW_DESIGN_INSTRUCTION "Instructional design"
+    ID_VIEW_CONTROLLER      "ddf"
+    ID_SELECTDATA           "Change outputs"
+    ID_ANIMATION_SHOWGRID   "Show or hide the alignment grid \nShow Grid"
+    ID_VIEW_WELCOME         "Welcome to DEMIST"
+    IDS_VIEW_WELCOME        "&Assignment"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INSTRUCTION_ADDUNIT  "Add a Learning Unit to the instructional design\nAdd Learning Unit"
+    ID_INSTRUCTION_ADDER    "Add an External Representation to the current Learning Unit\nAdd ER"
+    ID_INSTRUCTION_UNITPROP "Properties of the current selected Learning Unit\nLU Properties"
+    ID_INSTRUCTION_ERPROP   "Properties of the current External Representation\nER Properties"
+    ID_INSTRUCTION_TRYER    "Open the Selected ER in the workspace\nOpen ER"
+    ID_INSTRUCTION_AUTHMODE "Switch Test mode on/off\nTest Mode"
+    ID_ANIMATION_TEXT       "Add Text component\nAdd Text"
+    ID_ANIMATION_IMAGE      "Add Image component\nAdd Image"
+    ID_ANIMATION_VALUE      "Add Value Component\nAdd Value"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ANIMATION_SHOWPROPERTIES 
+                            "Switch between Build Mode / Test Mode \nBuild Mode"
+    ID_TRANS_INDEPENDENT    "No translation supported: this ER is independent from the other ones.\nIndependent"
+    ID_TRANS_MAPRELATION    "Map equivalent entities between this ER and the other ones.\nMap Relation"
+    ID_INSTRUCTION_SORTER   "Reorganise the ERs according to the author's need\nSort ERs"
+    ID_TRANS_DYNALINKED     "Full translation support between this ER and the other ones.\nDyna-Linked"
+    ID_VIEW_ERS             "Open one of the ERs of the current unit\nOpen ERs"
+    ID_ANIMATION_POLYGON    "Add a Polygon component\nAdd Polygon"
+    ID_INSTRUCTION_MULTIPANES "ddsdsds ds sd  sd"
+    ID_VIEW_EXTREP1         "Open the Controller\nOpen Controller"
+    ID_VIEW_EXTREP2         "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP3         "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP4         "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP5         "Open this External Representation\nOpen this E.R."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ANIMATION_SELECTOBJECT 
+                            "Show a list of every components for selection or edition\nShow Selector"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_EXTREP6         "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP7         "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP8         "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP9         "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP10        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP11        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP12        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP13        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP14        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP15        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP16        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP17        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP18        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP19        "Open this External Representation\nOpen this E.R."
+    ID_VIEW_EXTREP20        "Open this External Representation\nOpen this E.R."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ANIMATION_RECT       "Add Shape component\nAdd Shape"
+    ID_ANIMATION_DENSITY    "Add Population Density component\nAdd Pop. Density"
+    ID_ANIMATION_CONNECT    "Add Link component\nAdd Link"
+    ID_ANIMATION_SECTOR     "Add Sector component\nAdd Sector"
+    ID_FILE_PREF            "Preferences\nPrefs"
+    ID_FILE_SWITCHMODE      "Switch to Authoring or Learning Mode\nSwitch Mode"
+    ID_PARAMETERS_UPDATECHANGES "Apply changes in every ERs\nUpdate changes"
+    ID_PARAMETERS_RESETVALUES 
+                            "Reset default values to every Experimental Set\nReset Values"
+    ID_PARAMETERS_ADDEXPSET "Add a new Experimental Set to the initial conditions\nAdd Exp. Set"
+    ID_PARAMETERS_REMOVEEXPSET 
+                            "Delete am Experimental Set from the initial conditions\nRemove Exp. Set"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_MODE       "Authoring mode"
+    ID_INDICATOR_MODE2      "Learning mode"
+    ID_CONTR_START          "Start the simulation"
+    ID_CONTR_STOP           "Stop the simulation"
+    ID_CONTR_RESTART        "Restart the simulation"
+    ID_CONTR_BACK           "Review the simulation backward"
+    ID_CONTR_FOR            "Review the simulation forward"
+    ID_CONTR_PAUSE          "Stop the review of the simulation"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ANIMATION_FORWARD    "Bring selected component forward in the stack\nBring Forward"
+    ID_ANIMATION_BACKWARD   "Send selected component backward in the stack\nSend Backward"
+    ID_ANIMATION_NEXTEXPSET "Select the next Experimental Set\nNext Exp. Set"
+    ID_ANIMATION_PREVEXPSET "Select the previous Experimental Set\nPrevious Exp. Set"
+    ID_ANIMATION_SELECTEXPSET 
+                            "Change the current Experimental Set\nSelect Exp. Set"
+    ID_EDIT_SELECTALL       "Select all the components on the window\nSelect All"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TIMER_PLAY           "Run or continue to run the simulation from this point\nStart"
+    ID_INSTRUCTION_SAVEPOS  "Save the position and size of all the open ER\nSave ERs' position"
+    ID_ANIMATION_ADDSECTOR  "Switch construction mode to complete animation or selected sector\nSwitch Construction Mode"
+    ID_TIMER_RESTART        "Restart the simulation\nRestart"
+    ID_TIMER_STOP           "Stop the simulation at this point\nStop"
+    ID_ANIM_ALIGNLEFT       "Align all selected components to the left of the first one\nAlign Left"
+    ID_ANIM_ALIGNCENTER     "Align all selected components to the center of the first selected one\nAlign Center"
+    ID_ANIM_ALIGNRIGHT      "Align all selected components to the right of the first selected one\nAlign Right"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ANIM_ALIGNTOP        "Align all selected components to the top of the first selected one\nAlign Top"
+    ID_ANIM_ALIGNMIDDLE     "Align all selected components to the middle of the first selected one\nAlign Middle"
+    ID_ANIM_ALIGNBOTTOM     "Align all selected components to the left of the bottom selected one\nAlign Bottom"
+    ID_ANIM_ALIGNHOR        "Distribute all selected selected components along an horizontal pattern\nDistribute Horizontally"
+    ID_ANIM_ALIGNVER        "Distribute all selected selected components along an horizontal pattern\nDistribute Vertically"
+    ID_ANIM_CONSTRUCTION    "Show or Hide the Components Tool Bar"
+    ID_ANIM_ALIGN           "Show or Hide the Alignment Tool Bar"
+    ID_ANIMATION_CATER      "Add ""Caterpillar"" component\nAdd Caterpillar"
+    ID_TASK_MAPFACT         "Map Fact\nMap Fact"
+    ID_TASK_MAPRELATION     "Map Relation\nMap Relation"
+    ID_TASK_SUPPORTACTION   "Support Action\nSupport Action"
+    ID_TASK_CANCELTASK      "Cancel Task\nCancel Task"
+    ID_VIEW_TASKBAR         "Show or hide the task bar\nToggle TaskBar"
+    ID_INSTRUCTION_NEXTLU   "Select and activate the next Learning Unit\nNext Unit"
+    ID_INSTRUCTION_PREVLU   "Select and activate the previous Learning Unit\nPrevious Unit"
+    ID_CONTROLLER_NEXTUNIT  "Activate the next Learning Unit\nNext L.U."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CONTR_BEGIN          "Go to the begining of the simulation"
+    ID_CONTR_END            "Go to the end of the simulation"
+    ID_CONTR_TASK           "Show the task's assignment"
+    ID_CONTR_STEPP          "Go to the previous step of the simulation"
+    ID_CONTR_STEPN          "Go to the next step of the simulation"
+    ID_CONTR_ADDA           "Start an Action"
+    ID_CONTR_ADDH           "Start a Prediction"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    MSG_LU_ACT_INIT         "Do you really want to restart the whole scenario ?"
+    MSG_LU_ACT_CURRENT      "Do you really want to restart the current Unit ?"
+    MSG_LU_ACT_PREVIOUS     "Do you really want to go to the previous Unit ?"
+    MSG_LU_ACT_NEXT         "Do you really want to go to the next Unit ?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    MSG_HTML_CREATE         "The introduction HTML does not exist. Do you want to create it?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WELCOME_START        "Start the Scenario\nStart Scenario"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WELCOME_NEXT         "Go to the next Unit of the Scenario\nGo to Next Unit"
+    ID_WELCOME_CURRENT      "Start the current Unit\nStart Unit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_VIEWBUILDMODEL_TMPL "\nViewBuildModel\nViewBu\nViewBu Files (*.vie)\n.vie\nViewBuildModel.Document\nViewBu Document"
+    IDR_VIEWHTMLWELCOME_TMPL 
+                            "\nViewHTMLWelcome\nViewHT\nViewHT Files (*.vie)\n.vie\nViewHTMLWelcome.Document\nViewHT Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ERR_NOSIMMODEL          "There is no model selected for this Learning Unit.\nCheck its properties before modifying the ERs"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Simul.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

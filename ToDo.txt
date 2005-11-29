@@ -1,0 +1,37 @@
+========================================================================
+       DEMIST : TODO file
+========================================================================
+
+
+EXTERNAL REPRESENTATIONS
+- Add an icon in each ER in order to signify the Translation level (DONE)
+- ACTION and HYPOTHESIS should broadcast their reaction during the modifications (DONE)
+
+WELCOME ER
+- In learning mode, this ER should be opened and put to the front at the begining of EVERY LU 
+- Learner should read it before starting the LU (add a button to start it on the ER)
+
+CONTROLLER
+- Try to prevent the Controller to be closed when a LU is activated (?)
+- after a BP is done and the simulation restart, the Task button should disapear (DONE)
+- Inactivate the review buttons as long as the task is not read
+- Reduce the sizes of the Initial Conditions in the Controller (DONE)
+
+PIE/BAR CHART
+- Try to use different pattern (brush) for the same information that belong to different ExpSet
+
+XY-GRAPH
+- Try to implement a more readable/usefull scaling procedure (DONE)
+- Slow down the simulation in Learning Mode (DONE)
+
+MODELS
+- No DOUBLING TIME in SSLG
+
+INSTRUCTIONAL DESIGN
+- Implement a Cut & Paste operation between LUs and across files (DONE)
+- Think about a reordering of the LUs in the scenario
+
+AUTHORING PILOTS
+- Reduce the Caterpillar bitmaps and change the Caterpillar component from logarithmic to linear one (DONE)
+- complexify the different scenarios (in term of ERs) but keep them limited to 3 (DONE)
+- In the Barnacles, use Prediction BP instead of Information (DONE)
